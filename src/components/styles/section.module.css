@@ -1,0 +1,38 @@
+.section {
+  padding: 4rem 16rem;
+}
+
+.dark {
+  background-color: var(--color-trueBlack);
+  color: var(--color-white);
+}
+
+@media only screen and (max-width: 81.25em) {
+  .section {
+    padding: 4rem 12rem;
+  }
+}
+
+@media only screen and (max-width: 71.875em) {
+  .section {
+    padding: 4rem 10rem;
+  }
+}
+
+@media only screen and (max-width: 53.125em) {
+  .section {
+    padding: 4rem 8rem;
+  }
+}
+
+@media only screen and (max-width: 40.625em) {
+  .section {
+    padding: 4rem 4rem;
+  }
+}
+
+@media only screen and (max-width: 32.5em) {
+  .section {
+    padding: 4rem 2rem;
+  }
+}

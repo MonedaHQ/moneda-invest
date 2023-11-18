@@ -1,0 +1,24 @@
+.main {
+  min-height: 100dvh;
+}
+.content {
+  display: grid;
+  place-items: center;
+  row-gap: 3rem;
+  max-width: 90rem;
+  text-align: center;
+  margin: auto;
+}
+
+.content h3 {
+  font-size: 6rem;
+  font-weight: 200;
+  color: var(--color-orange);
+}
+
+.content h3 span {
+  color: var(--color-white);
+}
+
+.imageContainer {
+}

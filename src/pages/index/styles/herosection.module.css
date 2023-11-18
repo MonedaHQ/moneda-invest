@@ -1,0 +1,162 @@
+.heroSection {
+  min-height: 100vh;
+  position: relative;
+
+  display: grid;
+  grid-auto-rows: max-content;
+  align-content: center;
+
+  row-gap: 6rem;
+
+  padding: 24rem 12rem;
+}
+
+.backgroundImageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+      71.35% 71.35% at 50% 50%,
+      rgba(255, 255, 255, 0.94) 0%,
+      rgba(209, 209, 209, 0.94) 100%
+    ),
+    url('/background-img.jpg');
+  background-position: center;
+  background-size: cover;
+  animation: zoomInOut 20s infinite;
+  z-index: -2;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.mainContent {
+  max-width: 80%;
+  display: grid;
+  grid-auto-rows: max-content;
+  row-gap: 2rem;
+}
+.headingMask {
+  overflow: hidden;
+}
+
+.heading {
+  font-size: 8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  padding-bottom: 1rem;
+}
+
+.heading span {
+  color: var(--color-orange);
+}
+
+.imageContainer {
+  width: 80%;
+  margin: auto;
+}
+
+.heroImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.logoContainer {
+  display: none;
+}
+
+@media only screen and (max-width: 112em) {
+  .backgroundImageContainer {
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 93.75em) {
+  .heroSection {
+    padding: 18rem 8rem;
+  }
+}
+
+@media only screen and (max-width: 85em) {
+  .heading {
+    font-size: 6rem;
+  }
+}
+
+@media only screen and (max-width: 68.4375em) {
+  .logoContainer {
+    display: block;
+    width: 80%;
+  }
+
+  .logoContainer img {
+    width: 50%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 64.3125em) {
+  .heading {
+    font-size: 4.8rem;
+  }
+  .imageContainer {
+    width: 100%;
+  }
+  .backgroundImageContainer {
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 59.375em) {
+  .mainContent {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 46.875em) {
+  .heroSection {
+    padding: 4rem 6rem;
+  }
+}
+
+@media only screen and (max-width: 34.375em) {
+  .heroSection {
+    padding: 6em 2rem;
+  }
+
+  .heading {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 17.5em) {
+  .heading {
+    font-size: 2.5rem;
+  }
+}
