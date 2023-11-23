@@ -14,19 +14,20 @@ import Newsletter from './index/Newsletter';
 import Footer from '@/components/footerComponents/Footer';
 import { homeExplore, homeQuickLinks } from '@/data/footerLinks';
 import MetaTags from '@/components/head';
+import { scrollOffset } from '@/utils/config';
 
 function Home() {
-  const scrollPosition = useScrollPosition(200);
-
   const framerMotionKit = { motion, useInView, AnimatePresence };
+  const scrollPosition = useScrollPosition(scrollOffset);
+
   return (
     <>
       <MetaTags
         title="Home - Moneda Investment Limited"
         description="We Are Attracted To African Gap"
       />
-      <Navigation scrollPosition={scrollPosition} motion={motion} />
-      <BurgerNavigation motionKit={framerMotionKit} />
+      <Navigation scrollPosition={scrollPosition} />
+      <BurgerNavigation />
       <HeroSection motionKit={framerMotionKit} />
       <WhyMonedaExists />
       <InvestorRelations motionKit={framerMotionKit} />
@@ -34,7 +35,7 @@ function Home() {
       <WhyMoneda motionKit={framerMotionKit} />
       <Reports />
       <Newsletter motionKit={framerMotionKit} />
-      <Footer quickLinks={homeQuickLinks} exploreLinks={homeExplore} />
+      <Footer />
     </>
   );
 }

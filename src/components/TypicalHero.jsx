@@ -4,7 +4,7 @@ import styles from './styles/typicalhero.module.css';
 import { delayedFade, headerAnimation } from '@/utils/anim';
 import Image from 'next/image';
 
-function TypicalHero({ content }) {
+function TypicalHero({ content, variant = 'xl' }) {
   const { title, citation } = content;
   return (
     <section className={styles.hero}>
@@ -23,7 +23,7 @@ function TypicalHero({ content }) {
       </div>
       <div className={styles.headingMask}>
         <motion.h1
-          className={styles.heading}
+          className={`${styles.heading} ${styles[variant]}`}
           variants={headerAnimation}
           initial="initial"
           animate="enter"

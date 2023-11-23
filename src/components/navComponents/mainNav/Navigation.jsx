@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 import Button from '@/components/Button';
 import NavLink from './NavLink';
@@ -7,7 +8,7 @@ import styles from './styles/navigation.module.css';
 import { homeMenuLinks } from '@/data/menu';
 import { useRouter } from 'next/router';
 
-function Navigation({ scrollPosition, motion }) {
+function Navigation({ scrollPosition }) {
   const isHero = scrollPosition > 120;
   const router = useRouter();
   return (

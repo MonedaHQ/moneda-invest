@@ -1,10 +1,10 @@
 import styles from './styles/footer.module.css';
 import FooterContent from './FooterContent';
-import { socialLinks } from '@/data/footerLinks';
+import { homeExplore, homeQuickLinks, socialLinks } from '@/data/footerLinks';
 
 import Magnetic from '../Magnetic';
 
-function Footer({ quickLinks, exploreLinks }) {
+function Footer({ quickLinks = homeQuickLinks, exploreLinks = homeExplore }) {
   const year = new Date().getFullYear();
   return (
     <footer className={styles.footer}>

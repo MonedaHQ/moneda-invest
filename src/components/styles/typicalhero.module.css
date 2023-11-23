@@ -50,8 +50,15 @@
 }
 
 .heading {
-  font-size: 6.8rem;
   font-weight: 600;
+}
+
+.xl {
+  font-size: 6.8rem;
+}
+
+.lg {
+  font-size: 4.8rem;
 }
 
 .heading span {
@@ -77,8 +84,12 @@
     padding: 8rem 10rem;
   }
 
-  .heading {
+  .xl {
     font-size: 6rem;
+  }
+
+  .lg {
+    font-size: 4.4rem;
   }
 
   .hero p {
@@ -106,18 +117,25 @@
   .hero {
     padding: 8rem 4rem;
   }
-  .heading {
+  .xl {
     font-size: 4rem;
   }
 
+  .lg {
+    font-size: 2.8rem;
+  }
   .hero p {
     font-size: 2rem;
   }
 }
 
 @media only screen and (max-width: 34.375em) {
-  .heading {
+  .xl {
     font-size: 3.2rem;
+  }
+
+  .lg {
+    font-size: 2.2rem;
   }
 }
 
@@ -128,7 +146,11 @@
 }
 
 @media only screen and (max-width: 23.4375em) {
-  .heading {
+  .xl {
+    font-size: 2rem;
+  }
+
+  .lg {
     font-size: 2rem;
   }
 

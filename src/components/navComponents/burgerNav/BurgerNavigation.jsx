@@ -1,3 +1,5 @@
+import { motion, AnimatePresence } from 'framer-motion';
+
 import { PiEquals, PiX } from 'react-icons/pi';
 
 import { useMenuToggler } from '@/context/MenuToggleContext';
@@ -8,8 +10,7 @@ import BurgerMenuList from './BurgerMenuList';
 
 import styles from './styles/burgernavigation.module.css';
 
-function BurgerNavigation({ motionKit }) {
-  const { motion, AnimatePresence } = motionKit;
+function BurgerNavigation() {
   const { isMenuOpen, closeMenu, toggleMenu } = useMenuToggler();
 
   return (
