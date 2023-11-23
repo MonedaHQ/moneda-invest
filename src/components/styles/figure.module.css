@@ -1,0 +1,52 @@
+.figure {
+  position: relative;
+}
+
+.figure:hover > figcaption {
+  bottom: 2rem;
+  left: 3rem;
+  color: white;
+
+  border-left: 5px solid var(--color-orange);
+}
+
+.figure:hover > img {
+  border: 0px solid transparent;
+  filter: brightness(0.5);
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+.caption {
+  position: absolute;
+  color: transparent;
+  bottom: 0rem;
+  left: 3rem;
+  transition: all 0.3s;
+
+  padding: 0 2rem;
+
+  border-left: 5px solid transparent;
+}
+
+.image {
+  width: 100%;
+  /* height: auto; */
+  object-position: center;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  border: 5px solid transparent;
+  transition: all 0.3s;
+}
+
+.borderRadius {
+  border-radius: 0.8rem;
+}
+
+@media only screen and (max-width: 34.375em) {
+  .image {
+    height: auto;
+  }
+}

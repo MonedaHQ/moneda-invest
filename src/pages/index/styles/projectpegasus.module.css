@@ -1,5 +1,10 @@
 .main {
-  min-height: 100dvh;
+  min-height: 88rem;
+
+  display: grid;
+  grid-auto-rows: max-content;
+  justify-content: center;
+  row-gap: 5rem;
 }
 .content {
   display: grid;
@@ -12,6 +17,7 @@
 
 .content h3 {
   font-size: 6rem;
+  line-height: 1;
   font-weight: 200;
   color: var(--color-orange);
 }
@@ -21,4 +27,82 @@
 }
 
 .imageContainer {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  display: grid;
+  justify-items: center;
+  justify-self: center;
+}
+
+.mainImage,
+.smallMainImage {
+  width: 80%;
+  height: auto;
+  border-radius: 2.5rem;
+}
+
+.mainImage {
+  position: absolute;
+}
+
+.smallMainImage {
+  display: none;
+}
+
+.secondaryImage1 {
+  position: absolute;
+  top: 12rem;
+  left: 12rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+}
+
+.secondaryImage2 {
+  position: absolute;
+  width: 25%;
+  height: auto;
+  top: 8rem;
+  right: -5rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+
+@media only screen and (max-width: 58.125em) {
+  .main {
+    min-height: auto;
+    padding: 8rem 4rem;
+  }
+  .mainImage,
+  .secondaryImage1,
+  .secondaryImage2 {
+    display: none;
+  }
+
+  .smallMainImage {
+    display: block;
+    width: 100%;
+    border-radius: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 46.875em) {
+  .main {
+    padding: 6rem 2rem;
+  }
+
+  .content h3 {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .main {
+    padding: 4rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 17.5em) {
+  .main {
+    padding: 2rem 2rem;
+  }
 }

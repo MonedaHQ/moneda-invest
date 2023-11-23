@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './styles/whymonedaexists.module.css';
 
 function WhyMonedaExists() {
@@ -27,7 +28,14 @@ function WhyMonedaExists() {
           and execution expertise to oil contractors abandoned by traditional
           credit. This is why we exist.
         </p>
-        <h4>Ejike Egbuagu, Chief Group Executive</h4>
+        <h4>Ejike Egbuagu, Group Chief Executive</h4>
+        <Image
+          src="/images/signature.png"
+          width={250}
+          height={80}
+          alt="Ejike's signature"
+          draggable={false}
+        />
       </div>
     </section>
   );

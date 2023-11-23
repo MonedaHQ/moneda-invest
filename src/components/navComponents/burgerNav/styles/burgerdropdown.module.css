@@ -1,0 +1,31 @@
+.dropdown {
+  padding: 2rem;
+  background-color: var(--color-brown);
+  border-radius: 0.8rem;
+  margin-top: 2rem;
+}
+
+.navList {
+  list-style: none;
+  display: grid;
+  grid-auto-rows: max-content;
+  row-gap: 1rem;
+}
+
+.navList li {
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 26.25em) {
+  .navList li {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 17.5em) {
+  .navList li {
+    font-size: 1.6rem;
+  }
+}

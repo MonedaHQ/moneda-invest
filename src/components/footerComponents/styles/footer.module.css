@@ -1,0 +1,136 @@
+.footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 8rem;
+  padding-bottom: 2rem;
+  display: grid;
+  grid-auto-rows: max-content;
+  row-gap: 1rem;
+}
+
+.coin {
+  width: 100%;
+}
+
+.coin img {
+  width: 50%;
+  height: auto;
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr);
+  align-items: start;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid rgba(245, 245, 245, 0.6);
+}
+
+.linkBlock {
+  display: grid;
+  grid-auto-rows: max-content;
+  row-gap: 1rem;
+}
+
+.linkBlock h4 {
+  font-size: 2.6rem;
+  font-weight: 400;
+}
+
+.contactLinks {
+  list-style: none;
+}
+
+.contactLinks li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contactLinks li svg {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 4rem;
+  padding-bottom: 0rem;
+}
+
+.socialIcon {
+  color: inherit;
+  cursor: pointer;
+}
+
+.socialIcon svg {
+  width: 2.4rem;
+  height: 2.4rem;
+
+  transition: all 0.3s;
+}
+
+.socialIcon:hover > svg {
+  fill: var(--color-orange);
+}
+
+.allRights {
+  text-align: center;
+  color: rgba(245, 245, 245, 0.6);
+}
+
+@media only screen and (max-width: 68.75em) {
+  .footerContent {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 3rem;
+  }
+
+  .coin {
+    grid-column: 1 /-1;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .coin img {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 46.875em) {
+  .footer {
+    padding: 8rem 2rem;
+  }
+  .footerContent {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 0rem 2rem;
+    padding-bottom: 4rem;
+  }
+
+  .linkBlock {
+    text-align: center;
+  }
+
+  .linkBlock ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .coin img {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 17.5em) {
+  .footer {
+    padding: 4rem 0;
+  }
+
+  .footerContent {
+    border-bottom: 1px solid transparent;
+  }
+}

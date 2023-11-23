@@ -1,0 +1,10 @@
+.svgContainer {
+  position: absolute;
+  top: 0;
+  left: -99px;
+  width: 100px;
+  height: 100%;
+  fill: var(--color-black);
+  stroke: none;
+  z-index: 50000;
+}

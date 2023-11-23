@@ -9,6 +9,7 @@
   row-gap: 6rem;
 
   padding: 24rem 12rem;
+  padding-bottom: 10rem;
 }
 
 .backgroundImageContainer {
@@ -32,7 +33,7 @@
       rgba(255, 255, 255, 0.94) 0%,
       rgba(209, 209, 209, 0.94) 100%
     ),
-    url('/background-img.jpg');
+    url('/images/background-img.jpg');
   background-position: center;
   background-size: cover;
   animation: zoomInOut 20s infinite;
@@ -75,6 +76,8 @@
 .imageContainer {
   width: 80%;
   margin: auto;
+  overflow: hidden;
+  border-radius: 1.5rem;
 }
 
 .heroImg {

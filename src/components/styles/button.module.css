@@ -1,5 +1,7 @@
 .button {
   font: inherit;
+  color: inherit;
+  text-decoration: none;
   padding: 1rem 2rem;
   border: none;
   background-color: transparent;
@@ -28,13 +30,20 @@
   color: var(--color-black);
 }
 
+.tertiary {
+  background-color: var(--color-brown);
+  color: var(--color-white);
+}
+
 .primary:hover,
 .primary-reverse:hover,
-.secondary:hover {
+.secondary:hover,
+.tertiary:hover {
   scale: 1.1;
 }
 
-.primary-reverse:hover {
+.primary-reverse:hover,
+.tertiary:hover {
   color: var(--color-black);
 }
 
@@ -44,7 +53,8 @@
 
 .primary:hover::after,
 .primary-reverse:hover::after,
-.secondary:hover::after {
+.secondary:hover::after,
+.tertiary:hover::after {
   opacity: 1;
   transform: scaleX(1) scaleY(1);
 }
@@ -53,12 +63,14 @@
 .secondary::after {
   background-color: var(--color-black);
 }
-.primary-reverse::after {
+.primary-reverse::after,
+.tertiary::after {
   background-color: var(--color-white);
 }
 .primary::after,
 .primary-reverse::after,
-.secondary::after {
+.secondary::after,
+.tertiary::after {
   position: absolute;
   content: '';
   width: 100%;

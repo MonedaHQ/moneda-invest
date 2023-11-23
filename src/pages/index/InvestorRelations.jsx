@@ -6,30 +6,21 @@ import TwoButtonWrapper from '@/components/TwoButtonWrapper';
 import Image from 'next/image';
 
 import styles from './styles/investorrelations.module.css';
+import { useRef } from 'react';
+import { scaleUpSlow } from '@/utils/anim';
 
 function InvestorRelations({ motionKit }) {
-  const { motion, inViewRef, inView } = motionKit;
+  const inViewRef = useRef();
+  const { motion, useInView } = motionKit;
 
-  const containerVariants = {
-    initial: { scale: 0, opacity: 0 },
-    visible: {
-      scale: 1,
-      opacity: 1,
-      transition: {
-        delay: 0.1,
-        type: 'spring',
-        mass: 1,
-        damping: 12,
-        duration: 0.1,
-      },
-    },
-  };
+  const inView = useInView(inViewRef, { once: true });
+
   return (
     <Section>
       <motion.div
         className={styles.container}
         ref={inViewRef}
-        variants={containerVariants}
+        variants={scaleUpSlow}
         initial="initial"
         animate={inView ? 'visible' : 'initial'}
       >
@@ -59,7 +50,7 @@ function InvestorRelations({ motionKit }) {
         </div>
         <div className={styles.imageContainer}>
           <Image
-            src="/investor-relations.jpg"
+            src="/images/investor-relations.jpg"
             width={734}
             height={734}
             alt="Investor Relations"

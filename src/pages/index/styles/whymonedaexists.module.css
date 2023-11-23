@@ -37,6 +37,11 @@
   color: var(--color-orange);
 }
 
+.content img {
+  width: 20%;
+  height: auto;
+}
+
 @media only screen and (max-width: 72.5em) {
   .section {
     padding: 0rem 8rem;
@@ -56,5 +61,8 @@
 @media only screen and (max-width: 32.5em) {
   .section {
     padding: 8rem 2rem;
+  }
+  .content img {
+    width: 30%;
   }
 }

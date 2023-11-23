@@ -1,0 +1,138 @@
+.hero {
+  position: relative;
+  display: grid;
+  place-content: center;
+  grid-auto-rows: max-content;
+  row-gap: 3rem;
+  padding: 8rem 12rem;
+
+  height: 80vh;
+}
+
+.backgroundImageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+      71.35% 71.35% at 50% 50%,
+      rgba(255, 255, 255, 0.94) 0%,
+      rgba(209, 209, 209, 0.94) 100%
+    ),
+    url('/images/background-img.jpg');
+  background-position: center;
+  background-size: cover;
+  animation: zoomInOut 20s infinite;
+  z-index: -2;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.heading {
+  font-size: 6.8rem;
+  font-weight: 600;
+}
+
+.heading span {
+  color: var(--color-orange);
+}
+
+.headingMask {
+  overflow: hidden;
+}
+
+.hero p {
+  font-size: 2.6rem;
+  font-style: italic;
+  border-left: 5px solid var(--color-orange);
+  padding-left: 2rem;
+}
+.logoContainer {
+  display: none;
+}
+
+@media only screen and (max-width: 81.25em) {
+  .hero {
+    padding: 8rem 10rem;
+  }
+
+  .heading {
+    font-size: 6rem;
+  }
+
+  .hero p {
+    font-size: 2.2rem;
+  }
+}
+
+@media only screen and (max-width: 68.4375em) {
+  .hero {
+    padding: 8rem;
+  }
+
+  .logoContainer {
+    display: block;
+    width: 50%;
+  }
+
+  .logoContainer img {
+    width: 50%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 59.375em) {
+  .hero {
+    padding: 8rem 4rem;
+  }
+  .heading {
+    font-size: 4rem;
+  }
+
+  .hero p {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 34.375em) {
+  .heading {
+    font-size: 3.2rem;
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 23.4375em) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: inherit;
+  }
+}

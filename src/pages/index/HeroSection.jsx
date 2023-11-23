@@ -1,30 +1,25 @@
 import { useRef } from 'react';
 import { useScroll, useTransform } from 'framer-motion';
+import { Carousel } from 'react-responsive-carousel';
+
+import { useSmoothScroll } from '@/context/SmoothScrollContext';
+
+import { highlights } from '@/data/slideshowData';
 
 import Image from 'next/image';
 import Button from '@/components/Button';
+import Figure from '@/components/Figure';
 import TwoButtonWrapper from '@/components/TwoButtonWrapper';
 
 import styles from './styles/herosection.module.css';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { headerAnimation } from '@/utils/anim';
 
 function HeroSection({ motionKit }) {
   const ref = useRef(null);
   const { motion } = motionKit;
 
-  const animation = {
-    initial: { y: '100%' },
-    enter: {
-      y: '0',
-      transition: {
-        duration: 0.75,
-        ease: [0.33, 1, 0.68, 1],
-        delay: 0.075,
-        repeat: Infinity,
-        repeatType: 'loop',
-        repeatDelay: 20,
-      },
-    },
-  };
+  const { handleScrollTo } = useSmoothScroll();
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -52,7 +47,7 @@ function HeroSection({ motionKit }) {
         <div className={styles.headingMask}>
           <motion.h1
             className={styles.heading}
-            variants={animation}
+            variants={headerAnimation}
             initial="initial"
             animate="enter"
           >
@@ -69,7 +64,10 @@ function HeroSection({ motionKit }) {
           <Button variant="primary" onClick={() => console.log('Clicked')}>
             Try Pegasus
           </Button>
-          <Button variant="link-light" onClick={() => console.log('Link')}>
+          <Button
+            variant="link-light"
+            onClick={() => handleScrollTo('pegasus', 100)}
+          >
             Learn more
           </Button>
         </TwoButtonWrapper>
@@ -79,14 +77,18 @@ function HeroSection({ motionKit }) {
         ref={ref}
         style={{ scale: scaleProgress }}
       >
-        <Image
-          src="/energy-production.jpg"
-          width={1236}
-          height={634}
-          alt="Energy Production"
-          className={styles.heroImg}
-          draggable={false}
-        />
+        <Carousel
+          showArrows={true}
+          infiniteLoop={true}
+          autoPlay={true}
+          interval={6000}
+          showThumbs={false}
+          showStatus={false}
+        >
+          {highlights.map((piece) => (
+            <Figure options={piece} key={piece.src} />
+          ))}
+        </Carousel>
       </motion.div>
     </section>
   );
