@@ -10,7 +10,7 @@ export const homeQuickLinks = [
   { label: 'Our Story', path: '/our-story' },
   { label: 'What We Do', path: '/what-we-do' },
   { label: 'Our Team', path: '/our-team' },
-  { label: 'Privacy Policy', path: '/privacy-policy' },
+  // { label: 'Privacy Policy', path: '/privacy-policy' },
 ];
 
 export const homeExplore = [

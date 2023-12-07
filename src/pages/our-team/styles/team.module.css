@@ -1,0 +1,157 @@
+.members {
+  display: grid;
+  row-gap: 3rem;
+}
+
+.members h3 {
+  font-size: 3.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.membersContainer {
+  background-color: var(--color-gray);
+  border-radius: 5rem;
+  padding: 8rem;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3rem;
+  row-gap: 3rem;
+  overflow: hidden;
+}
+
+.main {
+  display: grid;
+  row-gap: 6rem;
+}
+
+.member {
+  background-color: var(--color-white);
+  border-radius: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+  overflow: hidden;
+}
+
+.titles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  padding: 4rem;
+}
+
+.avatarContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.avatar {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50rem;
+}
+
+.titleContent h4 {
+  font-size: 2.6rem;
+}
+
+.titleContent h5 {
+  font-size: 1.8rem;
+  color: var(--color-orange);
+}
+
+.titleContent h6 {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.paragraph {
+  background-color: var(--color-brown);
+  color: var(--color-white);
+  height: 100%;
+  padding: 4rem;
+}
+
+@media only screen and (max-width: 106.25em) {
+  .titleContent h4 {
+    font-size: 2rem;
+  }
+
+  .titleContent h5 {
+    font-size: 1.6rem;
+  }
+
+  .titleContent h6 {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 100em) {
+  .membersContainer {
+    padding: 4rem;
+  }
+}
+
+@media only screen and (max-width: 94.375em) {
+  .membersContainer {
+    padding: 1.8rem;
+    column-gap: 1.6rem;
+    row-gap: 1.6rem;
+    border-radius: 1.4rem;
+  }
+
+  .titles {
+    padding: 2.4rem;
+  }
+
+  .paragraph {
+    padding: 2.8rem;
+  }
+}
+
+@media only screen and (max-width: 86.875em) {
+  .membersContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .member {
+    max-width: 80rem;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 40.625em) {
+  .titleContent h4 {
+    font-size: 1.8rem;
+  }
+
+  .titleContent h5 {
+    font-size: 1.4rem;
+  }
+
+  .titleContent h6 {
+    font-size: 1rem;
+  }
+  .paragraph p {
+    font-size: 1.4rem;
+  }
+  .members h3 {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  .titles {
+    padding: 1.6rem;
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+
+  .members h3 {
+    font-size: 2.6rem;
+  }
+}

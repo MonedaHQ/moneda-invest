@@ -32,7 +32,7 @@
   z-index: -1;
 }
 
-@media only screen and (max-width: 68.4375em) {
+@media only screen and (max-width: 75em) {
   .navigation {
     display: block;
   }

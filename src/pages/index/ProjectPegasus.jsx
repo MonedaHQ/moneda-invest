@@ -1,3 +1,5 @@
+import { motion, useInView } from 'framer-motion';
+
 import Button from '@/components/Button';
 import Section from '@/components/Section';
 import TwoButtonWrapper from '@/components/TwoButtonWrapper';
@@ -5,9 +7,8 @@ import TwoButtonWrapper from '@/components/TwoButtonWrapper';
 import styles from './styles/projectpegasus.module.css';
 import { useRef } from 'react';
 
-function ProjectPegasus({ motionKit }) {
+function ProjectPegasus() {
   const inViewRef = useRef();
-  const { motion, useInView } = motionKit;
 
   const inView = useInView(inViewRef, { once: true });
 
@@ -69,7 +70,7 @@ function ProjectPegasus({ motionKit }) {
             success.
           </p>
           <TwoButtonWrapper>
-            <Button variant="primary-reverse">Try Pegasus</Button>
+            <Button variant="primary-reverse">Sign in</Button>
             <Button variant="link-dark">Learn more</Button>
           </TwoButtonWrapper>
         </motion.div>

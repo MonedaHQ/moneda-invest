@@ -1,3 +1,4 @@
+import { motion, useInView } from 'framer-motion';
 import { PiCheckCircleFill } from 'react-icons/pi';
 
 import Button from '@/components/Button';
@@ -8,10 +9,11 @@ import Image from 'next/image';
 import styles from './styles/investorrelations.module.css';
 import { useRef } from 'react';
 import { scaleUpSlow } from '@/utils/anim';
+import { useRouter } from 'next/router';
 
 function InvestorRelations({ motionKit }) {
+  const router = useRouter();
   const inViewRef = useRef();
-  const { motion, useInView } = motionKit;
 
   const inView = useInView(inViewRef, { once: true });
 
@@ -45,7 +47,12 @@ function InvestorRelations({ motionKit }) {
           </ul>
           <TwoButtonWrapper>
             <Button variant="secondary"> Become a partner</Button>
-            <Button variant="link-dark">Learn more</Button>
+            <Button
+              variant="link-dark"
+              onClick={() => router.push('/investor-relations')}
+            >
+              Learn more
+            </Button>
           </TwoButtonWrapper>
         </div>
         <div className={styles.imageContainer}>

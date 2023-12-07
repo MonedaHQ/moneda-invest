@@ -27,4 +27,5 @@
 
 .dropDownList {
   list-style: none;
+  color: var(--color-black);
 }

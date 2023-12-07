@@ -1,0 +1,41 @@
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+  justify-items: center;
+
+  padding: 2rem 2rem;
+
+  margin: auto;
+
+  overflow: hidden;
+}
+
+.feature {
+  display: grid;
+  place-items: center;
+  row-gap: 1rem;
+}
+
+.feature svg {
+  width: 3.8rem;
+  height: 3.8rem;
+  fill: var(--color-orange);
+}
+
+.feature p {
+  text-align: center;
+}
+
+@media only screen and (max-width: 68.75em) {
+  .main {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+
+  .feature svg {
+    width: 4.8rem;
+    height: 4.8rem;
+    fill: var(--color-orange);
+  }
+}

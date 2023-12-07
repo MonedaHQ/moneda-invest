@@ -1,0 +1,41 @@
+.main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3rem;
+  row-gap: 3rem;
+  max-width: 80rem;
+  margin: auto;
+}
+
+.feature {
+  display: grid;
+  justify-items: center;
+  row-gap: 1rem;
+}
+
+.feature svg {
+  width: 4.8rem;
+  height: 4.8rem;
+  fill: var(--color-orange);
+}
+
+.feature p {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 47.5em) {
+  .feature svg {
+    width: 3.8rem;
+    height: 3.8rem;
+  }
+  .feature p {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 32.7rem) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+}

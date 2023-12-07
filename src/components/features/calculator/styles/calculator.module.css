@@ -1,0 +1,72 @@
+.main {
+  background-color: var(--color-brown);
+  color: var(--color-white);
+  border-radius: 1.6rem;
+  padding: 4rem;
+
+  display: grid;
+  grid-auto-rows: max-content;
+  row-gap: 3rem;
+}
+
+.mainHeading {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.calcDisplay {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  max-width: 80%;
+  padding: 4rem;
+  border-radius: 1.2rem;
+  margin: auto;
+
+  display: grid;
+  row-gap: 1.5rem;
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.calcDisplay p {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media only screen and (max-width: 89.375em) {
+  .mainHeading {
+    font-size: 2.8rem;
+  }
+  .main {
+    row-gap: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 33.75em) {
+  .main {
+    padding: 2rem;
+  }
+  .mainHeading {
+    font-size: 2rem;
+  }
+
+  .calcDisplay {
+    padding: 2.4rem;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 27.5em) {
+  .main {
+    padding: 1.2rem;
+  }
+  .calcDisplay {
+    width: 100%;
+    overflow: hidden;
+    padding: 1.2rem;
+  }
+}

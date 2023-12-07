@@ -1,5 +1,3 @@
-import { motion, useInView, AnimatePresence } from 'framer-motion';
-
 import useScrollPosition from '@/hooks/useScrollPostition';
 
 import Navigation from '@/components/navComponents/mainNav/Navigation';
@@ -12,12 +10,10 @@ import WhyMoneda from './index/WhyMoneda';
 import Reports from './index/Reports';
 import Newsletter from './index/Newsletter';
 import Footer from '@/components/footerComponents/Footer';
-import { homeExplore, homeQuickLinks } from '@/data/footerLinks';
 import MetaTags from '@/components/head';
 import { scrollOffset } from '@/utils/config';
 
 function Home() {
-  const framerMotionKit = { motion, useInView, AnimatePresence };
   const scrollPosition = useScrollPosition(scrollOffset);
 
   return (
@@ -28,13 +24,13 @@ function Home() {
       />
       <Navigation scrollPosition={scrollPosition} />
       <BurgerNavigation />
-      <HeroSection motionKit={framerMotionKit} />
+      <HeroSection />
       <WhyMonedaExists />
-      <InvestorRelations motionKit={framerMotionKit} />
-      <ProjectPegasus motionKit={framerMotionKit} />
-      <WhyMoneda motionKit={framerMotionKit} />
+      <InvestorRelations />
+      <ProjectPegasus />
+      <WhyMoneda />
       <Reports />
-      <Newsletter motionKit={framerMotionKit} />
+      <Newsletter />
       <Footer />
     </>
   );

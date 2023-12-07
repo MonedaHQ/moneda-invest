@@ -1,0 +1,218 @@
+.productDescription {
+  display: grid;
+  row-gap: 1rem;
+}
+
+.heading {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 3rem;
+}
+
+.heading h3 {
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+
+.featuresAndBenefits {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3rem;
+  max-width: 100rem;
+  margin: auto;
+
+  overflow: hidden;
+
+  padding: 4rem 0;
+}
+
+.list {
+  padding: 2rem 4rem;
+  border-radius: 1.5rem;
+
+  display: grid;
+  grid-auto-rows: max-content;
+  row-gap: 2rem;
+
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+.list h4 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+
+  border-bottom: 2px solid var(--color-orange);
+}
+
+.list ul {
+  list-style: none;
+  display: grid;
+  row-gap: 2rem;
+}
+
+.listitem {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.listitem svg {
+  width: 1.8rem;
+  height: 1.8rem;
+  fill: var(--color-orange);
+}
+
+.plansContainer {
+  background-color: var(--color-gray);
+  border-radius: 2.5rem;
+
+  max-width: 100rem;
+  margin: auto;
+
+  padding: 8rem;
+
+  display: grid;
+  place-content: center;
+}
+
+.plans {
+  background-color: var(--color-white);
+  border-radius: 1.5rem;
+
+  padding: 4rem 6rem;
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+
+  display: grid;
+  justify-items: center;
+  row-gap: 2rem;
+}
+
+.plans h4 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.buttonPanel {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding-bottom: 2rem;
+
+  border-bottom: 2px solid var(--color-gray);
+}
+
+.buttonPanel button {
+  font: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0rem 2rem;
+  border-bottom: 2px solid transparent;
+
+  transition: all 0.2s;
+}
+
+.buttonPanel button:hover {
+  color: var(--color-orange);
+}
+
+.selectedPlan {
+  color: var(--color-orange);
+  border-bottom: 2px solid var(--color-orange);
+}
+
+.planList {
+  list-style: none;
+  display: grid;
+  row-gap: 0.8rem;
+}
+
+.planList li {
+  font-size: 1.8rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.planList li svg {
+  fill: var(--color-orange);
+}
+
+@media only screen and (max-width: 59.375em) {
+  .list {
+    padding: 2rem;
+  }
+}
+
+@media only screen and (max-width: 46.875em) {
+  .featuresAndBenefits {
+    width: 100%;
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+
+  .list {
+    padding: 4rem;
+  }
+
+  .plansContainer {
+    width: 100%;
+    padding: 4rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 35em) {
+  .plansContainer {
+    padding: 2rem;
+  }
+  .plans {
+    padding: 4rem;
+  }
+}
+
+@media only screen and (max-width: 28.75em) {
+  .plans {
+    padding: 2rem;
+  }
+  .plans h4 {
+    font-size: 1.4rem;
+  }
+
+  .planList li {
+    font-size: 1.6rem;
+  }
+  .buttonPanel button {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 25.3125em) {
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+  .heading h3 {
+    font-size: 2.2rem;
+  }
+  .list {
+    padding: 2rem;
+  }
+
+  .plansContainer {
+    width: 100%;
+    padding: 0;
+  }
+  .buttonPanel {
+    flex-direction: column;
+  }
+}

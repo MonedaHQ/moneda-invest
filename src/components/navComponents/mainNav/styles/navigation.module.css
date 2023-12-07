@@ -19,7 +19,8 @@
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
 }
 
-.navContainer a {
+.navContainer a,
+.navContainer button {
   justify-self: self-end;
 }
 
@@ -44,13 +45,17 @@
   cursor: pointer;
 }
 
+.dark {
+  color: var(--color-white);
+}
+
 @media only screen and (max-width: 93.75em) {
   .navContainer {
     padding: 2rem 8rem;
   }
 }
 
-@media only screen and (max-width: 68.4375em) {
+@media only screen and (max-width: 75em) {
   .navContainer {
     display: none;
   }

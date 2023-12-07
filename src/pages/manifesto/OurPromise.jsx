@@ -1,7 +1,8 @@
+import { motion, useInView } from 'framer-motion';
 import Section from '@/components/Section';
 import styles from './styles/ourpromise.module.css';
 import { useRef } from 'react';
-import { scaleUpSlow } from '@/utils/anim';
+import { scaleUpSlow, slide } from '@/utils/anim';
 
 const promiseStatements = [
   {
@@ -21,17 +22,17 @@ const promiseStatements = [
   },
 ];
 
-function OurPromise({ motionKit }) {
-  const { motion, useInView } = motionKit;
+function OurPromise() {
   return (
     <Section>
       <main className={styles.main}>
         <h1 className={styles.heading}>Our Promise</h1>
         <div className={styles.statements}>
-          {promiseStatements.map((statement) => (
+          {promiseStatements.map((statement, index) => (
             <Statement
-              key={statement.title}
+              key={statement.heading}
               statement={statement}
+              index={index}
               motionKit={{ motion, useInView }}
             />
           ))}
@@ -41,7 +42,7 @@ function OurPromise({ motionKit }) {
   );
 }
 
-function Statement({ statement, motionKit }) {
+function Statement({ statement, motionKit, index }) {
   const { motion, useInView } = motionKit;
   const ref = useRef();
   const inView = useInView(ref, { once: true });
@@ -50,9 +51,10 @@ function Statement({ statement, motionKit }) {
     <motion.div
       className={styles.statement}
       ref={ref}
-      variants={scaleUpSlow}
+      custom={index}
+      variants={slide}
       initial="initial"
-      animate={inView ? 'visible' : 'initial'}
+      animate={inView ? 'enter' : 'initial'}
     >
       <h4>{statement.heading}</h4>
       <p>{statement.paragraph}</p>

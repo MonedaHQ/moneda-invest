@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Section from '@/components/Section';
 
 import styles from './styles/corevalues.module.css';
@@ -42,8 +43,7 @@ const coreValues = [
   },
 ];
 
-function OurCoreValues({ motionKit }) {
-  const { motion, useInView } = motionKit;
+function OurCoreValues() {
   return (
     <Section>
       <main className={styles.main}>

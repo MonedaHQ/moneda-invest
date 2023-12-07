@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import { useScroll, useTransform } from 'framer-motion';
 import { Carousel } from 'react-responsive-carousel';
@@ -15,9 +16,8 @@ import styles from './styles/herosection.module.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { headerAnimation } from '@/utils/anim';
 
-function HeroSection({ motionKit }) {
+function HeroSection() {
   const ref = useRef(null);
-  const { motion } = motionKit;
 
   const { handleScrollTo } = useSmoothScroll();
 
@@ -51,7 +51,7 @@ function HeroSection({ motionKit }) {
             initial="initial"
             animate="enter"
           >
-            Illuminating the Path to <span>African</span> Energy Success
+            Driving <span>African</span> SME Success in Every Sector
           </motion.h1>
         </div>
         <p>
@@ -62,13 +62,13 @@ function HeroSection({ motionKit }) {
         </p>
         <TwoButtonWrapper>
           <Button variant="primary" onClick={() => console.log('Clicked')}>
-            Try Pegasus
+            Sign in
           </Button>
           <Button
             variant="link-light"
             onClick={() => handleScrollTo('pegasus', 100)}
           >
-            Learn more
+            What is Pegasus?
           </Button>
         </TwoButtonWrapper>
       </main>

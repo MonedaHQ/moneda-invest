@@ -11,6 +11,7 @@ import OurPromise from './OurPromise';
 import { scrollOffset } from '@/utils/config';
 import TypicalHero from '@/components/TypicalHero';
 import Introduction from '@/components/Introduction';
+import MetaTags from '@/components/head';
 
 const heroContent = {
   title: '“By 2100, a third of people on Earth will be <span>African</span>”',
@@ -23,15 +24,31 @@ const introductionContent = {
     ' Our mission is to trigger unconventional growth in Natural Resource value chains in Africa using alternative credit and world-class execution',
 };
 
+const image = `radial-gradient(
+  71.35% 71.35% at 50% 50%,
+  rgba(0, 0, 0, .8) 0%,
+  rgba(0, 0, 0, .8) 100%
+),
+url('/images/hero-images/illusion-of-plenty.jpg')`;
+
 function Manifesto() {
   const scrollPosition = useScrollPosition(scrollOffset);
 
   const framerMotionKit = { motion, useInView, AnimatePresence };
   return (
     <>
-      <Navigation scrollPosition={scrollPosition} />
+      <MetaTags
+        title="Manifesto - Moneda Investment Limited"
+        description="Our mission is to trigger unconventional growth in Natural Resource value chains in Africa using alternative credit and world-class execution"
+      />
+      <Navigation scrollPosition={scrollPosition} darkHero={true} />
       <BurgerNavigation />
-      <TypicalHero content={heroContent} />
+      <TypicalHero
+        content={heroContent}
+        darkBg={true}
+        image={image}
+        imagePosition="center left"
+      />
       <Introduction content={introductionContent} />
       <OurCoreValues motionKit={framerMotionKit} />
       <OurPromise motionKit={framerMotionKit} />

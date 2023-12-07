@@ -8,16 +8,23 @@ import styles from './styles/navigation.module.css';
 import { homeMenuLinks } from '@/data/menu';
 import { useRouter } from 'next/router';
 
-function Navigation({ scrollPosition }) {
+function Navigation({ scrollPosition, darkHero = false }) {
   const isHero = scrollPosition > 120;
   const router = useRouter();
+
+  const isInvest = router.pathname.startsWith('/investor-relations');
+
+  const dark = darkHero && !isHero ? 'dark' : '';
+  const buttonStyle = darkHero && !isHero ? 'primary-reverse' : 'primary';
   return (
     <header
-      className={`${styles.navContainer} ${isHero ? styles.whiteBg : ''}`}
+      className={`${styles.navContainer} ${isHero ? styles.whiteBg : ''} ${
+        dark && styles[dark]
+      }`}
     >
       <div className={styles.logoContainer}>
         <Image
-          src="/images/moneda-logo.png"
+          src={`/images/moneda-logo${dark}.png`}
           width={280}
           height={58.55}
           alt="Moneda Logo"
@@ -33,8 +40,13 @@ function Navigation({ scrollPosition }) {
           ))}
         </ul>
       </nav>
-      <Button variant="primary" href="https://contractor.monedainvest.app">
-        Try Pegasus
+
+      <Button
+        variant={buttonStyle}
+        href={!isInvest && 'https://contractor.monedainvest.app'}
+        onClick={() => isInvest && router.push('/')}
+      >
+        {isInvest ? 'Become a partner' : 'Sign in'}
       </Button>
     </header>
   );

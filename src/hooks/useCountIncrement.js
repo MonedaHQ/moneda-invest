@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useInView } from 'framer-motion';
 
-export function useCountIncrement(initialCount, totalNumber) {
+export function useCountIncrement(initialCount, totalNumber, round = true) {
   const [count, setCount] = useState(initialCount);
   const increment = totalNumber / (0.1 * 1000);
   const ref = useRef();
@@ -24,5 +24,10 @@ export function useCountIncrement(initialCount, totalNumber) {
       };
     }
   }, [increment, totalNumber, inView]);
-  return [Math.floor(count), ref];
+
+  let sentCount = +count.toFixed(1);
+  if (!round) {
+    sentCount = Math.floor(count);
+  }
+  return [sentCount, ref];
 }

@@ -8,6 +8,7 @@ function Button({
   variant,
   onMouseEnter = null,
   onMouseLeave = null,
+  type = 'button',
 }) {
   const commonProps = {
     className: `${styles.button} ${styles[variant]}`,
@@ -22,7 +23,11 @@ function Button({
       </Link>
     );
   } else {
-    return <button {...commonProps}>{children}</button>;
+    return (
+      <button {...commonProps} type={type}>
+        {children}
+      </button>
+    );
   }
 }
 

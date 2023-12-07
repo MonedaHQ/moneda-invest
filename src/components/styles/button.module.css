@@ -30,15 +30,17 @@
   color: var(--color-black);
 }
 
-.tertiary {
+.tertiary,
+.tertiary-reverse {
   background-color: var(--color-brown);
   color: var(--color-white);
 }
 
-.primary:hover,
+.tertiary-reverse .primary:hover,
 .primary-reverse:hover,
 .secondary:hover,
-.tertiary:hover {
+.tertiary:hover,
+.tertiary-reverse:hover {
   scale: 1.1;
 }
 
@@ -54,7 +56,8 @@
 .primary:hover::after,
 .primary-reverse:hover::after,
 .secondary:hover::after,
-.tertiary:hover::after {
+.tertiary:hover::after,
+.tertiary-reverse:hover::after {
   opacity: 1;
   transform: scaleX(1) scaleY(1);
 }
@@ -67,10 +70,14 @@
 .tertiary::after {
   background-color: var(--color-white);
 }
+.tertiary-reverse::after {
+  background-color: var(--color-orange);
+}
 .primary::after,
 .primary-reverse::after,
 .secondary::after,
-.tertiary::after {
+.tertiary::after,
+.tertiary-reverse::after {
   position: absolute;
   content: '';
   width: 100%;
@@ -85,7 +92,8 @@
   transform-origin: center;
 }
 
-.link-light {
+.link-light,
+.link-light-small {
   background: linear-gradient(to right, transparent, transparent),
     linear-gradient(to right, #fa6800, #ae4902, #0a0400);
 }
@@ -96,7 +104,8 @@
 }
 
 .link-light,
-.link-dark {
+.link-dark,
+.link-light-small {
   border-radius: 0;
   padding: 1rem 0;
   display: flex;
@@ -110,10 +119,16 @@
 }
 
 .link-light:hover,
-.link-dark:hover {
+.link-dark:hover,
+.link-light-small:hover {
   background-size: 0 2px, 100% 2px;
 }
 
-.link-light:hover {
+.link-light:hover,
+.link-light-small:hover {
   color: var(--color-orange);
+}
+
+.link-light-small {
+  font-size: 1.4rem;
 }

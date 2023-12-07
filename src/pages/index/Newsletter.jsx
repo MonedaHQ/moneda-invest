@@ -1,3 +1,4 @@
+import { motion, useInView } from 'framer-motion';
 import Section from '@/components/Section';
 
 import styles from './styles/newsletter.module.css';
@@ -5,10 +6,9 @@ import Button from '@/components/Button';
 import { useRef } from 'react';
 import { scaleUpSlow } from '@/utils/anim';
 
-function Newsletter({ motionKit }) {
+function Newsletter() {
   const ref = useRef();
 
-  const { motion, useInView } = motionKit;
   const inView = useInView(ref, { once: true });
 
   function handleSubmit(e) {

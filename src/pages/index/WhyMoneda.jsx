@@ -1,3 +1,4 @@
+import { motion, useInView } from 'framer-motion';
 import { PiChartBarFill } from 'react-icons/pi';
 import { BiSupport } from 'react-icons/bi';
 import { TbWorldSearch } from 'react-icons/tb';
@@ -10,14 +11,12 @@ import { useCountIncrement } from '@/hooks/useCountIncrement';
 import { useRef } from 'react';
 import { scaleUpSlow } from '@/utils/anim';
 
-function WhyMoneda({ motionKit }) {
+function WhyMoneda() {
   const ref = useRef();
 
   const [countYears, refYears] = useCountIncrement(0, 8);
   const [countTransactions, refTransactions] = useCountIncrement(0, 362);
   const [countSMEs, refSMEs] = useCountIncrement(0, 111);
-
-  const { motion, useInView } = motionKit;
 
   const inView = useInView(ref, { once: true });
 

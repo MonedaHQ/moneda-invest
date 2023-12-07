@@ -1,0 +1,86 @@
+.nowReading {
+  position: fixed;
+  background-color: var(--color-gray);
+  padding: 0.8rem 12rem;
+  margin-top: 8rem;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  z-index: 200;
+
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+    rgb(209, 213, 219) 0px 0px 0px 1px inset;
+
+  transition: all 0.4s;
+}
+
+.nowReading h5 {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.nowReading h5 span {
+  text-transform: none;
+  letter-spacing: 0rem;
+  color: var(--color-black);
+}
+
+.display {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 75em) {
+  .nowReading {
+    margin-top: 0rem;
+    opacity: 1;
+    padding: 0.8rem 10rem;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .nowReading {
+    padding: 0.8rem 8rem;
+  }
+}
+
+@media only screen and (max-width: 41.875em) {
+  .nowReading {
+    padding: 0.8rem 6rem;
+  }
+}
+
+@media only screen and (max-width: 39.375em) {
+  .nowReading {
+    padding: 0.8rem 4rem;
+  }
+}
+
+@media only screen and (max-width: 28.125em) {
+  .nowReading {
+    padding: 0.8rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 28.125em) {
+  .nowReading {
+    padding: 0.8rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 26.25em) {
+  .nowReading {
+    padding: 1rem 1rem;
+    display: grid;
+    row-gap: 1rem;
+  }
+
+  .nowReading h5 {
+    grid-row: 2 / 3;
+    display: none;
+  }
+}
