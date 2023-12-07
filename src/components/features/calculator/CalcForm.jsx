@@ -8,6 +8,7 @@ import {
 } from '@/utils/helpers';
 import Form from './Form';
 import Results from './Results';
+import Loader from '@/components/Loader';
 
 const initalState = {
   interest: 0,
@@ -34,7 +35,7 @@ function CalcForm({ products }) {
   const { errors } = formState;
 
   if (!products || products.length === 0) {
-    return <p>Loading...</p>;
+    return <Loader />;
   }
 
   const allProducts = products.map((product) => product.name);

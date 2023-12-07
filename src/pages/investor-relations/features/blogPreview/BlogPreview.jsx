@@ -6,11 +6,12 @@ import { getImage } from '@/utils/helpers';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useThreePosts } from '@/hooks/useThreePosts';
+import Loader from '@/components/Loader';
 
 function BlogPreview() {
   const { isLoading, posts } = useThreePosts();
-  if (isLoading) return <p>Loading</p>;
-  if (!posts || posts.length === 0) return <p>No posts</p>;
+  if (isLoading) return <Loader />;
+  if (!posts || posts.length === 0) return;
 
   const postPreview = posts.map((post) => {
     return {
