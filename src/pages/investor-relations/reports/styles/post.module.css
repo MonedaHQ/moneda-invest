@@ -53,9 +53,18 @@
 }
 
 .body p:first-of-type::first-letter {
-  font-size: 6rem; /* Set the desired font size */
-  font-weight: bold; /* Set the desired font weight */
-  /* float: left; */
+  font-size: 6rem;
+  font-weight: bold;
+  color: var(--color-orange);
+}
+
+.body p a {
+  color: var(--color-orange);
+  transition: all 0.2s;
+}
+
+.body p a:hover {
+  color: var(--color-black);
 }
 
 .body ul {

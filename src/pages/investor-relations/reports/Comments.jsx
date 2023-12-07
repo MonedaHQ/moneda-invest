@@ -8,6 +8,7 @@ import { useReducer, useRef } from 'react';
 import CommentForm from './CommentForm';
 import { useRouter } from 'next/router';
 import { useAllComments } from '@/hooks/useAllComments';
+import Loader from '@/components/Loader';
 
 const initialState = {
   addComment: false,
@@ -27,7 +28,7 @@ function Comments({ slug, id }) {
   const [state, dispatch] = useReducer(formReducer, initialState);
   const { isLoading, comments } = useAllComments(slug);
 
-  if (isLoading) return <p>Loading</p>;
+  if (isLoading) return <Loader />;
 
   const allComments = comments.map((comment) => {
     return {
@@ -87,6 +88,7 @@ function Comment({ comment, index }) {
           height={40}
           src="/images/avatar.jpg"
           alt={comment.author}
+          draggable={false}
         />
       </div>
       <div className={styles.commentContainer}>

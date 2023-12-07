@@ -16,8 +16,6 @@ function Product() {
   const router = useRouter();
   const [selectedPlan, setSelectedPlan] = useState('Individual');
   const { type, plan } = router.query;
-  const ref = useRef();
-  const inView = useInView(ref, { once: true });
 
   let allProducts;
   let currentProduct;
@@ -52,13 +50,7 @@ function Product() {
       </div>
       {currentPlan && (
         <div className={styles.plansContainer} id="plans">
-          <motion.div
-            className={styles.plans}
-            ref={ref}
-            variants={scaleUpSlow}
-            initial="initial"
-            animate={inView ? 'visible' : 'intial'}
-          >
+          <div className={styles.plans}>
             <h4>Plans</h4>
 
             <div className={styles.buttonPanel}>
@@ -80,7 +72,7 @@ function Product() {
               </button>
             </div>
             <Plans plan={selected} />
-          </motion.div>
+          </div>
         </div>
       )}
     </main>
