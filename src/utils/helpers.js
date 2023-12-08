@@ -58,3 +58,15 @@ export const getImage = (content) => {
 
   return imgSrc;
 };
+
+export function truncateString(str, numWords) {
+  const words = str.trim().split(' ');
+
+  if (words.length <= numWords) {
+    return str;
+  }
+
+  const trimmedWords = words.slice(0, numWords);
+
+  return `${trimmedWords.join(' ')}...`;
+}

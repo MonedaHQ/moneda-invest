@@ -1,0 +1,58 @@
+.pagContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pagContainer p span {
+  font-weight: 600;
+}
+
+.btnWrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.button {
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font: inherit;
+}
+
+.active {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  transition: all 0.3s;
+}
+
+.active:hover {
+  background-color: var(--color-orange);
+}
+
+.inactive {
+  background-color: var(--color-gray);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
+@media only screen and (max-width: 47.5em) {
+  .button {
+    font-size: 0.8rem;
+    padding: 0.6rem 1rem;
+  }
+}
+@media only screen and (max-width: 32.5em) {
+  .pagContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

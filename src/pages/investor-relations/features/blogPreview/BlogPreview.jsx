@@ -36,10 +36,16 @@ function BlogPreview() {
 }
 
 function Heading() {
+  const router = useRouter();
   return (
     <div className={styles.heading}>
       <h3>Treasury Reports</h3>
-      <Button variant="link-light">View all reports</Button>
+      <Button
+        variant="link-light"
+        onClick={() => router.push(`investor-relations/reports`)}
+      >
+        View all reports
+      </Button>
     </div>
   );
 }
