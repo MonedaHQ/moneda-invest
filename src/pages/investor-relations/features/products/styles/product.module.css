@@ -133,6 +133,12 @@
   border-bottom: 2px solid var(--color-orange);
 }
 
+.noSelected,
+.noSelected:link,
+.noSelected:visited {
+  color: var(--color-black);
+}
+
 .planList {
   list-style: none;
   display: grid;

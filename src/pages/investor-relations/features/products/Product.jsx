@@ -57,7 +57,9 @@ function Product() {
               <button
                 onClick={() => setSelectedPlan('Individual')}
                 className={
-                  selectedPlan === 'Individual' ? styles.selectedPlan : ''
+                  selectedPlan === 'Individual'
+                    ? styles.selectedPlan
+                    : styles.noSelected
                 }
               >
                 Individual
@@ -65,7 +67,9 @@ function Product() {
               <button
                 onClick={() => setSelectedPlan('Corporates')}
                 className={
-                  selectedPlan === 'Corporates' ? styles.selectedPlan : ''
+                  selectedPlan === 'Corporates'
+                    ? styles.selectedPlan
+                    : styles.noSelected
                 }
               >
                 Corporates

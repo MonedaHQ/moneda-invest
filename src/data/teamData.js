@@ -1,5 +1,5 @@
 export const advisoryTeam = {
-  title: 'Adivsory Team',
+  title: 'Adivsory Board',
   members: [
     {
       name: 'Uche Wigwe',
@@ -11,7 +11,7 @@ export const advisoryTeam = {
     },
     {
       name: 'Ekinadese Osayande',
-      position: 'Board Member',
+      position: 'Advisory Board Member',
       job: 'Consultant, Dese Advisory Limited',
       paragraph:
         'An Education Consultant with over 6 years of experience on advisory and mentorship in the education sector. She is currently putting her passion for education at work at Dese Advisory, where she focuses on advising and supporting career aspirants through their educational journey. Ekinadese holds a degree in Political Science, Economics, International Relations, African and American Studies from Stanford University, USA',
@@ -19,7 +19,7 @@ export const advisoryTeam = {
     },
     {
       name: 'Idakwo Shuaibu',
-      position: 'Board Member',
+      position: 'Advisory Board Member',
       job: null,
       paragraph:
         "An economist and Certified Trade Finance/Treasury Specialist (London Institure of Banking and Finance) with over 14 years experience spanning across the Banking, Energy and Telecommunications industries. Subject expert in Trade Finance practice and consultancy, letters of credit executions, Standby LC's and Guarantees, settlements and remittances and cross border trade transactions, including treasury management, and corporate finance ",
@@ -27,7 +27,7 @@ export const advisoryTeam = {
     },
     {
       name: 'Tope Imasekha',
-      position: 'Board Member',
+      position: 'Advisory Board Member',
       job: 'Corporate Finance and Development Economics Expert, Founder - Women Impacting Nigeria (WIN)',
       paragraph:
         'Tope Imasekha is a Corporate Finance and Development Economics Specialist. She is a highly motivated and competent corporate finance and investment professional with over 12 years experience in transaction advisory, transacion/deal structuring, corporate finance, M & A advisory, project finance, valuation, and due diligence. She is a specialist in corporate finance with a background in Economics and Accounting. She has managed various energy transactions in excess of 4 Billion USD in Nigeria and other Sub-Saharan Africa countries',
@@ -49,7 +49,7 @@ export const executiveTeam = {
     },
     {
       name: 'Habibah Waziri',
-      position: 'COO',
+      position: 'Chief Operating Officer',
       job: null,
       paragraph:
         'Habibah brings over 6 years of management consulting experience across several African countries focused on selecting and buiding best-in-class teams on the continent. She served as country head of one of the largest people management firms in Africa. At Moneda, she oversees Culture, Capacity, Processes, Resources and Technology. Habibah is a fellow of the Insitute of Management Consultants (IMC)',
@@ -65,7 +65,7 @@ export const executiveTeam = {
     },
     {
       name: 'Peter Aloga',
-      position: 'Group Financial Controller',
+      position: 'Chief Audit & Compliance Officer',
       job: null,
       paragraph:
         'From banking, through asset management to real estate, Energy and Consulting, Peter has spent over 12 years providing world class solutions in financial reporting and management accounting. A trusted professional, chartered accountant and senior fellow of the institure of chartered accountants of Nigeria (ICAN). University of Lags (MSC Accounting)',
@@ -89,7 +89,7 @@ export const executiveTeam = {
     },
     {
       name: 'Nkechukwuaga Amangbo',
-      position: 'Head, Treasury',
+      position: 'VP Liquidity, Commodities, Global Markets',
       job: null,
       paragraph:
         'She has over 10 years in Banking, with experience spanning across Customer Service, Correspondent Banking and Treasury Operations, giving her a broad range of perspectives and contributes to her ability to effectively deliver in record time. At Moneda, she supervises all aspects of our treasury operations including management of long-term and short-term funds, and money market investments. She has a degree in Economics and Development Studies and a certificate from the international Finance Corporation.',
