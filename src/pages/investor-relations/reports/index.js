@@ -28,7 +28,7 @@ function AllBlogPosts() {
       />
       <Navigation scrollPosition={scrollPosition} darkHero={false} />
       <BurgerNavigation />
-      <GoBack />
+      {posts.length > 0 && <GoBack />}
       {posts.length === 0 && <NoPosts />}
       {posts.length > 0 && <AllPosts content={{ posts, totalPosts }} />}
       <Footer />
