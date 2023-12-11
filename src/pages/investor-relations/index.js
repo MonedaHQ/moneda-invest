@@ -27,7 +27,7 @@ function InvestorRelations() {
     rgba(0, 0, 0, .8) 0%,
     rgba(0, 0, 0, .8) 100%
   ),
-  url(${milkingIsland})`;
+  url(${milkingIsland.src})`;
 
   const introductionContent = {
     title: 'Empowering Investments. Enriching Futures.',
