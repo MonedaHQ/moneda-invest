@@ -11,7 +11,6 @@ import OurProducts from './features/products/OurProducts';
 import Footer from '@/components/footerComponents/Footer';
 import BlogPreview from './features/blogPreview/BlogPreview';
 import Calculator from '@/components/features/calculator/Calculator';
-import milkingIsland from 'public/images/hero-images/milking-island-ii.jpg';
 
 function InvestorRelations() {
   const scrollPosition = useScrollPosition(scrollOffset);
@@ -27,7 +26,7 @@ function InvestorRelations() {
     rgba(0, 0, 0, .8) 0%,
     rgba(0, 0, 0, .8) 100%
   ),
-  url(${milkingIsland.src})`;
+  url('/images/hero-images/milking-island-ii.jpg')`;
 
   const introductionContent = {
     title: 'Empowering Investments. Enriching Futures.',
