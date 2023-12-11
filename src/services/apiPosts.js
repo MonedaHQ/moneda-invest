@@ -27,7 +27,7 @@ export async function getPosts() {
 }
 
 export async function getAllPosts({ page }) {
-  let query = `${url}/posts?per_page=${PAGE_SIZE}&_embed`;
+  let query = `${url}/posts?per_page=${PAGE_SIZE}&_embed&status=publish`;
 
   if (page) query = `${query}&page=${page}`;
 
@@ -40,7 +40,7 @@ export async function getAllPosts({ page }) {
 }
 
 export async function getThreePosts() {
-  const query = `${url}/posts?per_page=3&_orderby=date&_order=desc`;
+  const query = `${url}/posts?per_page=3&_orderby=date&status=publish`;
   const res = await fetch(query);
   const posts = res.json();
 
