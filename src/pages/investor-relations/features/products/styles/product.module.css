@@ -106,7 +106,9 @@
   border-bottom: 2px solid var(--color-gray);
 }
 
-.buttonPanel button {
+.buttonPanel button,
+.buttonPanel button:link,
+.buttonPanel button:visited {
   font: inherit;
   border: none;
   outline: none;
@@ -124,7 +126,9 @@
   color: var(--color-orange);
 }
 
-.selectedPlan {
+.selectedPlan,
+.selectedPlan:link,
+.selectedPlan:visited {
   color: var(--color-orange);
   border-bottom: 2px solid var(--color-orange);
 }

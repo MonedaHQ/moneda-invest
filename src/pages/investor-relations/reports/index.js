@@ -28,10 +28,25 @@ function AllBlogPosts() {
       />
       <Navigation scrollPosition={scrollPosition} darkHero={false} />
       <BurgerNavigation />
+      <GoBack />
       {posts.length === 0 && <NoPosts />}
       {posts.length > 0 && <AllPosts content={{ posts, totalPosts }} />}
       <Footer />
     </>
+  );
+}
+
+function GoBack() {
+  const router = useRouter();
+  return (
+    <div className={styles.goBack}>
+      <Button
+        variant="tertiary-reverse"
+        onClick={() => router.push('/investor-relations')}
+      >
+        Back
+      </Button>
+    </div>
   );
 }
 
