@@ -21,7 +21,7 @@ function Home() {
       rgba(0, 0, 0, .5) 0%,
       rgba(0, 0, 0, .5) 100%
     ),
-    url('/images/hero-images/milking-island-i.png')`;
+    url('/images/hero-images/milking-island-i.PNG')`;
 
   const introductionContent = {
     title: 'The Present is a Key to The Future',
