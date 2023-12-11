@@ -10,6 +10,7 @@ import Loader from '@/components/Loader';
 
 function BlogPreview() {
   const { isLoading, posts } = useThreePosts();
+  // console.log(posts);
   if (isLoading) return <Loader />;
   if (!posts || posts.length === 0) return;
 

@@ -102,3 +102,64 @@
 .numComments p {
   font-size: 1.4rem;
 }
+
+@media only screen and (max-width: 87.5em) {
+  .postImg img {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  .postImg img {
+    height: 180px;
+  }
+}
+
+@media only screen and (max-width: 68.75em) {
+  .main {
+    padding: 6rem 0;
+  }
+  .posts {
+    column-gap: 1.6rem;
+    row-gap: 1.6rem;
+    padding: 2rem;
+  }
+
+  .post {
+    padding: 1.4rem;
+  }
+
+  .content h6 {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 36.25em) {
+  .posts {
+    grid-template-columns: 1fr;
+  }
+
+  .heading {
+    font-size: 2.8rem;
+  }
+
+  .postImg img {
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 18.125em) {
+  .heading {
+    font-size: 2.4rem;
+  }
+  .posts {
+    padding: 1.2rem;
+    row-gap: 1.2rem;
+  }
+}
