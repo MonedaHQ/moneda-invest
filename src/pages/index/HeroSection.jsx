@@ -35,7 +35,7 @@ function HeroSection() {
       </div>
       <div className={styles.logoContainer}>
         <Image
-          src="/moneda-logo.png"
+          src="/images/moneda-logo.png"
           width={280}
           height={58.55}
           alt="Moneda Logo"
