@@ -70,7 +70,7 @@ function PostPreview({ post }) {
       </div>
       <Button
         variant="tertiary-reverse"
-        onClick={() => router.push(`/investor-relations/reports/${post.slug}`)}
+        onClick={() => router.push(`/investor-relations/${post.slug}`)}
       >
         Read
       </Button>
