@@ -3,6 +3,7 @@ env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
   NEXT_PUBLIC_APP_API_BASE_URL: https://api.monedainvest.app
+  NEXT_PUBLIC_APP_BLOG_API_URL: https://monedatreasuryblog.com/wp-json/wp/v2
 on:
   push:
     branches:
