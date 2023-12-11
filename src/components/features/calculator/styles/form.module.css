@@ -30,6 +30,12 @@
   transition: all 0.2s;
 }
 
+.select,
+.select:link,
+.select:visited {
+  color: var(--color-black);
+}
+
 .select:focus,
 .input:focus {
   border: 1px solid var(--color-orange);
