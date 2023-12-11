@@ -29,7 +29,7 @@ function Home() {
       <InvestorRelations />
       <ProjectPegasus />
       <WhyMoneda />
-      <Reports />
+      {/* <Reports /> */}
       <Newsletter />
       <Footer />
     </>
