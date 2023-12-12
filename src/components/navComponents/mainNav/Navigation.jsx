@@ -44,7 +44,7 @@ function Navigation({ scrollPosition, darkHero = false }) {
       <Button
         variant={buttonStyle}
         href={!isInvest && 'https://contractor.monedainvest.app'}
-        onClick={() => isInvest && router.push('/')}
+        onClick={() => isInvest && router.push('/investor-relations/invest')}
       >
         {isInvest ? 'Become a partner' : 'Sign in'}
       </Button>
