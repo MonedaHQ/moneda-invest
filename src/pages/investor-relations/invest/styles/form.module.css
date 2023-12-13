@@ -55,6 +55,7 @@
   background-color: var(--color-gray);
   padding: 1rem 2rem;
   border-radius: 2.4rem;
+  width: 100%;
 
   transition: all 0.3s;
 }
@@ -114,5 +115,15 @@
   .input,
   .select {
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 18.75em) {
+  .formContainer {
+    padding: 0;
+  }
+
+  .form {
+    padding: 0rem;
   }
 }

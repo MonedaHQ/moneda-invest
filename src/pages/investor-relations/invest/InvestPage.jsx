@@ -98,13 +98,13 @@ function MainContent() {
 function FormTypes() {
   const router = useRouter();
   const formTypes = [
-    { name: 'Corporates', params: 'corporates' },
+    { name: 'Corporate', params: 'corporate' },
     { name: 'Individual', params: 'individual' },
   ];
 
   let currentSelection = router.query.type;
   if (!router.query.type) {
-    currentSelection = 'corporates';
+    currentSelection = 'corporate';
   }
 
   function handleClick(param) {

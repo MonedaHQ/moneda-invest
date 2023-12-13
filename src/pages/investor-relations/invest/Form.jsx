@@ -28,21 +28,26 @@ function Form() {
   if (router.query.type) {
     type = router.query.type;
   } else {
-    type = 'corporates';
+    type = 'corporate';
   }
 
   function onSubmit(formData) {
     const productId = data.find(
       (product) => product.name === formData.product_id
     )?.id;
-    const formInput = { ...formData, product_id: productId };
+    const formInput = {
+      ...formData,
+      product_id: productId,
+      investor_type: type,
+    };
+
     registerInvestor(formInput);
   }
 
   return (
     <div className={styles.formContainer}>
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-        {type === 'corporates' ? (
+        {type === 'corporate' ? (
           <CorporateForm
             formActions={{ register, errors }}
             products={products}
