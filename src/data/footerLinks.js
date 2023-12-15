@@ -14,10 +14,10 @@ export const homeQuickLinks = [
 ];
 
 export const homeExplore = [
-  { label: 'Pegasus', path: '/pegasus' },
+  // { label: 'Pegasus', path: '/pegasus' },
   { label: 'Investor Relations', path: '/investor-relations' },
   { label: 'Intelligence', path: '/intelligence' },
-  { label: 'Reports', path: '/reports' },
+  // { label: 'Reports', path: '/reports' },
 ];
 
 export const contactDetails = {

@@ -1,0 +1,157 @@
+.main {
+  min-height: 100dvh;
+  background: radial-gradient(
+      71.35% 71.35% at 50% 50%,
+      rgba(255, 255, 255, 0.94) 0%,
+      rgba(209, 209, 209, 0.94) 100%
+    ),
+    url('/images/hero-images/background-img.jpg');
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  background-color: var(--color-white);
+  padding: 4rem;
+  border-radius: 1.4rem;
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.6rem;
+  row-gap: 1.6rem;
+}
+
+.fieldset {
+  border: none;
+  display: grid;
+  grid-template-rows: repeat(3, max-content);
+  row-gap: 1.2rem;
+}
+
+.fieldset p {
+  color: var(--color-orange);
+}
+
+.fieldset input,
+.fieldset textarea {
+  border: 1px solid transparent;
+  background-color: var(--color-gray);
+  padding: 1rem 2rem;
+  font: inherit;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.fieldset input {
+  border-radius: 2.5rem;
+}
+
+.fieldset:last-of-type {
+  grid-column: 1 / -1;
+}
+
+.fieldset textarea {
+  border: none;
+  border: 1px solid transparent;
+  background-color: var(--color-gray);
+  border-radius: 1.2rem;
+  height: 20rem;
+}
+
+.fieldset input:focus,
+.fieldset textarea:focus {
+  border: 1px solid var(--color-orange);
+  outline: 1px solid var(--color-orange);
+}
+
+.btnWrapper {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.messageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.messageBox {
+  background-color: transparent;
+  padding: 4rem;
+  border-radius: 2.4rem;
+}
+
+.message {
+  background-color: var(--color-white);
+  padding: 4rem;
+  border-radius: 1.4rem;
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+
+  display: grid;
+  row-gap: 1.8rem;
+  justify-items: center;
+}
+
+.message svg {
+  width: 3.8rem;
+  height: 3.8rem;
+}
+
+.messageParagraph {
+  max-width: 60%;
+  text-align: center;
+}
+
+.successIcon {
+  color: var(--color-success);
+}
+
+.failIcon {
+  color: var(--color-orange);
+}
+
+@media only screen and (max-width: 75em) {
+  .messageContainer {
+    height: 80dvh;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .messageBox {
+    padding: 2rem;
+  }
+
+  .messageParagraph {
+    max-width: 80%;
+  }
+}
+
+@media only screen and (max-width: 39.375em) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 28.125em) {
+  .messageBox {
+    padding: 1.6rem;
+  }
+  .message {
+    padding: 2rem;
+  }
+
+  .messageParagraph {
+    max-width: 98%;
+  }
+}
+
+@media only screen and (max-width: 20.625em) {
+  .form {
+    padding: 4rem 2rem;
+  }
+}
