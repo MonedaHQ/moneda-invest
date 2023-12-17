@@ -21,7 +21,7 @@ export const homeExplore = [
 ];
 
 export const contactDetails = {
-  phoneNumber: { path: 'tel:01-23-4567', label: '01-23-4567' },
+  // phoneNumber: { path: 'tel:01-23-4567', label: '01-23-4567' },
   email: {
     path: 'mailto:info@monedainvest.com',
     label: 'info@monedainvest.com',
