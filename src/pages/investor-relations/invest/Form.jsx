@@ -42,7 +42,7 @@ function Form() {
       ...formData,
       product_id: productId,
       investment_type: type,
-      business_type: data.business_type.toLowerCase().includes('ltd') ? 'ltd' : data.business_type.toLowerCase(),
+      business_type: formData.business_type.toLowerCase().includes('ltd') ? 'ltd' : formData.business_type.toLowerCase(),
     };
 
     registerInvestor(formInput);
