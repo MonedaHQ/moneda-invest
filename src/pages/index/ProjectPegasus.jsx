@@ -70,7 +70,12 @@ function ProjectPegasus() {
             success.
           </p>
           <TwoButtonWrapper>
-            <Button variant="primary-reverse">Sign in</Button>
+            <Button
+              variant="primary-reverse"
+              href="https://contractor.monedainvest.app"
+            >
+              Sign in
+            </Button>
             {/* <Button variant="link-dark">Learn more</Button> */}
           </TwoButtonWrapper>
         </motion.div>
