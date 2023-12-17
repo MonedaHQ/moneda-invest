@@ -35,10 +35,14 @@ function Form() {
     const productId = data.find(
       (product) => product.name === formData.product_id
     )?.id;
+    if (formData.investor_type === 'corporate') {
+      delete formData.date_of_birth;
+    }
     const formInput = {
       ...formData,
       product_id: productId,
-      investor_type: type,
+      investment_type: type,
+      business_type: data.business_type.toLowerCase().includes('ltd') ? 'ltd' : data.business_type.toLowerCase(),
     };
 
     registerInvestor(formInput);
