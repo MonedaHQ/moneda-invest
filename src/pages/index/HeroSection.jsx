@@ -61,7 +61,7 @@ function HeroSection() {
           structured international trade across the African continent.
         </p>
         <TwoButtonWrapper>
-          <Button variant="primary" onClick={() => console.log('Clicked')}>
+          <Button variant="primary" href="https://contractor.monedainvest.app">
             Sign in
           </Button>
           <Button

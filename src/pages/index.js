@@ -30,7 +30,7 @@ function Home() {
       <ProjectPegasus />
       <WhyMoneda />
       {/* <Reports /> */}
-      <Newsletter />
+      {/* <Newsletter /> */}
       <Footer />
     </>
   );

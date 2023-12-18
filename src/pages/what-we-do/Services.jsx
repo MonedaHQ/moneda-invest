@@ -58,17 +58,9 @@ function Services() {
 
 function Service({ service }) {
   const { title, paragraph, products } = service;
-  const ref = useRef();
-  const inView = useInView(ref, { once: true });
 
   return (
-    <motion.div
-      className={styles.service}
-      ref={ref}
-      variants={delayedFade}
-      initial="initial"
-      animate={inView ? 'visible' : 'initial'}
-    >
+    <div className={styles.service}>
       <h3>{title}</h3>
       <p>{paragraph}</p>
 
@@ -79,7 +71,7 @@ function Service({ service }) {
           ))}
         </div>
       )}
-    </motion.div>
+    </div>
   );
 }
 

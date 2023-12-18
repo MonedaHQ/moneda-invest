@@ -14,9 +14,9 @@ import { scaleUpSlow } from '@/utils/anim';
 function WhyMoneda() {
   const ref = useRef();
 
-  const [countYears, refYears] = useCountIncrement(0, 8);
-  const [countTransactions, refTransactions] = useCountIncrement(0, 362);
-  const [countSMEs, refSMEs] = useCountIncrement(0, 111);
+  const [countYears, refYears] = useCountIncrement(0, 8, false);
+  const [countTransactions, refTransactions] = useCountIncrement(0, 362, false);
+  const [countSMEs, refSMEs] = useCountIncrement(0, 111, false);
 
   const inView = useInView(ref, { once: true });
 

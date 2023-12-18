@@ -23,12 +23,17 @@ function FooterContent({ quickLinks, exploreLinks }) {
       <div className={styles.linkBlock}>
         <h4>Contact us</h4>
         <ul className={styles.contactLinks}>
-          <li>
-            <PiPhoneFill />
-            <Button variant="link-dark" href={contactDetails.phoneNumber.path}>
-              {contactDetails.phoneNumber.label}
-            </Button>
-          </li>
+          {contactDetails.phoneNumber && (
+            <li>
+              <PiPhoneFill />
+              <Button
+                variant="link-dark"
+                href={contactDetails.phoneNumber.path}
+              >
+                {contactDetails.phoneNumber.label}
+              </Button>
+            </li>
+          )}
           <li>
             <PiEnvelopeSimpleFill />
             <Button variant="link-dark" href={contactDetails.email.path}>
