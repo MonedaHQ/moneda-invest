@@ -70,7 +70,7 @@ function Posts({ post }) {
 
         <Button
           variant="tertiary-reverse"
-          onClick={() => router.push(`${router.asPath}/${post.slug}`)}
+          onClick={() => router.push(`/investor-relations/${post.slug}`)}
         >
           Read
         </Button>

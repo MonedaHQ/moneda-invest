@@ -46,7 +46,13 @@ function InvestorRelations({ motionKit }) {
             </li>
           </ul>
           <TwoButtonWrapper>
-            <Button variant="secondary"> Become a partner</Button>
+            <Button
+              variant="secondary"
+              onClick={() => router.push('/investor-relations/invest')}
+            >
+              {' '}
+              Become a partner
+            </Button>
             <Button
               variant="link-dark"
               onClick={() => router.push('/investor-relations')}

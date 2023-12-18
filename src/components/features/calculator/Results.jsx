@@ -3,8 +3,10 @@ import Button from '@/components/Button';
 import styles from './styles/results.module.css';
 import { formatCurrency } from '@/utils/helpers';
 import { useCountIncrement } from '@/hooks/useCountIncrement';
+import { useRouter } from 'next/router';
 
 function Results({ state, reset }) {
+  const router = useRouter();
   return (
     <div className={styles.results}>
       <h3 className={styles.resultsHeading}>Your returns</h3>
@@ -37,7 +39,12 @@ function Results({ state, reset }) {
         />
       </div>
       <div className={styles.buttonWrapper}>
-        <Button variant="primary">Become a partner!</Button>
+        <Button
+          variant="primary"
+          onClick={() => router.push('/investor-relations/invest')}
+        >
+          Become a partner!
+        </Button>
         <Button variant="link-light" onClick={() => reset()}>
           Go Back
         </Button>

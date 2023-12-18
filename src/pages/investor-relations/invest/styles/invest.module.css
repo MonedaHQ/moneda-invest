@@ -1,0 +1,173 @@
+.main {
+  /* min-height: 100dvh; */
+  padding-top: 10rem;
+
+  display: grid;
+  row-gap: 1.8rem;
+}
+
+.monedaLogo {
+  justify-content: center;
+  display: none;
+}
+
+.mainContent {
+  max-width: 80rem;
+  margin: auto;
+  display: grid;
+  row-gap: 1.8rem;
+}
+
+.mainContent h3 {
+  font-size: 3.8vh;
+  font-weight: 600;
+  text-align: center;
+}
+
+.mainContent p {
+  text-align: center;
+}
+
+.formTypes {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.formButton,
+.formButton:link,
+.formButton:visited {
+  color: var(--color-black);
+}
+
+.formButton {
+  border: 1px solid transparent;
+  font: inherit;
+  padding: 1rem 2rem;
+  border-radius: 5rem;
+
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.formButton:focus {
+  outline: 1px solid var(--color-orange);
+  border: 1px solid var(--color-orange);
+}
+
+.active {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+}
+.inactive {
+  background-color: var(--color-gray);
+}
+
+.messageContainer {
+  /* min-height: 80vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.messageBox {
+  background-color: var(--color-gray);
+  padding: 4rem;
+  border-radius: 2.4rem;
+}
+
+.message {
+  background-color: var(--color-white);
+  padding: 4rem;
+  border-radius: 1.4rem;
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+
+  display: grid;
+  row-gap: 1.8rem;
+  justify-items: center;
+}
+
+.message svg {
+  width: 3.8rem;
+  height: 3.8rem;
+}
+
+.messageParagraph {
+  max-width: 60%;
+  text-align: center;
+}
+
+.successIcon {
+  color: var(--color-success);
+}
+
+.failIcon {
+  color: var(--color-orange);
+}
+
+@media only screen and (max-width: 75em) {
+  .main {
+    padding-top: 5rem;
+  }
+  .monedaLogo {
+    display: flex;
+  }
+  .messageContainer {
+    height: 80dvh;
+  }
+
+  .mainContent {
+    row-gap: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .messageBox {
+    padding: 2rem;
+  }
+
+  .messageParagraph {
+    max-width: 80%;
+  }
+}
+
+@media only screen and (max-width: 46.875em) {
+  .monedaLogo {
+    width: 30%;
+    margin: auto;
+  }
+  .monedaLogo img {
+    width: 100%;
+    height: auto;
+  }
+
+  .mainContent h3 {
+    font-size: 2.4rem;
+  }
+}
+
+@media only screen and (max-width: 42.5em) {
+  .mainContent h3 {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 28.125em) {
+  .messageBox {
+    padding: 1.6rem;
+  }
+  .message {
+    padding: 2rem;
+  }
+
+  .messageParagraph {
+    max-width: 98%;
+  }
+}
+
+@media only screen and (max-width: 21.875em) {
+  .formTypes {
+    gap: 1.2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+}

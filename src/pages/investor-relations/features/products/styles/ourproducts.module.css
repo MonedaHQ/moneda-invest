@@ -15,7 +15,9 @@
   font-weight: 600;
 }
 
-.button {
+.button,
+.button:link,
+.button:visited {
   font: inherit;
   border: 1px solid var(--color-black);
   outline: 1px solid transparent;
@@ -24,6 +26,7 @@
   border-radius: 5rem;
   background-color: transparent;
   transition: all 0.2s;
+  color: var(--color-black);
 }
 
 .button:hover {
@@ -51,7 +54,9 @@
   overflow: hidden;
 }
 
-.selectionButton {
+.selectionButton,
+.selectionButton:visited,
+.selected:link {
   font: inherit;
   border: none;
   outline: none;
@@ -59,11 +64,14 @@
   padding: 0.4rem 2.6rem;
 
   background-color: var(--color-gray);
+  color: var(--color-black);
 
   cursor: pointer;
 }
 
-.activeSelection {
+.activeSelection,
+.activeSelection:link,
+.activeSelection:visited {
   background-color: var(--color-orange);
   color: var(--color-white);
 }

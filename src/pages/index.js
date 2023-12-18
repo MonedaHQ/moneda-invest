@@ -29,8 +29,8 @@ function Home() {
       <InvestorRelations />
       <ProjectPegasus />
       <WhyMoneda />
-      <Reports />
-      <Newsletter />
+      {/* <Reports /> */}
+      {/* <Newsletter /> */}
       <Footer />
     </>
   );

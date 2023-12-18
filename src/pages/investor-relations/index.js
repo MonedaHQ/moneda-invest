@@ -11,6 +11,7 @@ import OurProducts from './features/products/OurProducts';
 import Footer from '@/components/footerComponents/Footer';
 import BlogPreview from './features/blogPreview/BlogPreview';
 import Calculator from '@/components/features/calculator/Calculator';
+import CTA from './CTA';
 
 function InvestorRelations() {
   const scrollPosition = useScrollPosition(scrollOffset);
@@ -51,6 +52,7 @@ function InvestorRelations() {
       />
       <Introduction content={introductionContent} />
       <Features />
+      <CTA />
       <OurProducts />
       <Calculator />
       <BlogPreview />

@@ -23,7 +23,7 @@ function formReducer(state, action) {
   }
 }
 
-function Comments({ slug, id }) {
+function PostComments({ slug, id }) {
   const router = useRouter();
   const [state, dispatch] = useReducer(formReducer, initialState);
   const { isLoading, comments } = useAllComments(slug);
@@ -110,4 +110,4 @@ function Comment({ comment, index }) {
   );
 }
 
-export default Comments;
+export default PostComments;

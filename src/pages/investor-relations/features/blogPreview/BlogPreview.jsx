@@ -10,6 +10,7 @@ import Loader from '@/components/Loader';
 
 function BlogPreview() {
   const { isLoading, posts } = useThreePosts();
+  // console.log(posts);
   if (isLoading) return <Loader />;
   if (!posts || posts.length === 0) return;
 
@@ -69,7 +70,7 @@ function PostPreview({ post }) {
       </div>
       <Button
         variant="tertiary-reverse"
-        onClick={() => router.push(`/investor-relations/reports/${post.slug}`)}
+        onClick={() => router.push(`/investor-relations/${post.slug}`)}
       >
         Read
       </Button>

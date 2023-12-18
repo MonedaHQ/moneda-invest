@@ -35,7 +35,7 @@ function HeroSection() {
       </div>
       <div className={styles.logoContainer}>
         <Image
-          src="/moneda-logo.png"
+          src="/images/moneda-logo.png"
           width={280}
           height={58.55}
           alt="Moneda Logo"
@@ -61,7 +61,7 @@ function HeroSection() {
           structured international trade across the African continent.
         </p>
         <TwoButtonWrapper>
-          <Button variant="primary" onClick={() => console.log('Clicked')}>
+          <Button variant="primary" href="https://contractor.monedainvest.app">
             Sign in
           </Button>
           <Button

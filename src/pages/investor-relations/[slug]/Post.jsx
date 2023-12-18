@@ -1,6 +1,6 @@
 import Section from '@/components/Section';
 import styles from './styles/post.module.css';
-import Comments from './Comments';
+import PostComments from './PostComments';
 
 function Post({ post }) {
   if (!post) return;
@@ -8,7 +8,7 @@ function Post({ post }) {
     <main className={styles.main}>
       <Title title={post.title} date={post.date} excerpt={post.excerpt} />
       <Body body={post.body} />
-      <Comments slug={post.slug} id={post.id} />
+      <PostComments slug={post.slug} id={post.id} />
     </main>
   );
 }

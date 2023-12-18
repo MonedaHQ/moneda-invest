@@ -14,14 +14,14 @@ export const homeQuickLinks = [
 ];
 
 export const homeExplore = [
-  { label: 'Pegasus', path: '/pegasus' },
+  // { label: 'Pegasus', path: '/pegasus' },
   { label: 'Investor Relations', path: '/investor-relations' },
   { label: 'Intelligence', path: '/intelligence' },
-  { label: 'Reports', path: '/reports' },
+  // { label: 'Reports', path: '/reports' },
 ];
 
 export const contactDetails = {
-  phoneNumber: { path: 'tel:01-23-4567', label: '01-23-4567' },
+  // phoneNumber: { path: 'tel:01-23-4567', label: '01-23-4567' },
   email: {
     path: 'mailto:info@monedainvest.com',
     label: 'info@monedainvest.com',
