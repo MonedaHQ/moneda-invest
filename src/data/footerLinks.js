@@ -21,7 +21,11 @@ export const homeExplore = [
 ];
 
 export const contactDetails = {
-  // phoneNumber: { path: 'tel:01-23-4567', label: '01-23-4567' },
+  phoneNumber: { path: 'tel:+2348185000400', label: '+234 818 500 0400' },
+  whatsapp: {
+    path: 'https://wa.link/ihxcl6',
+    label: 'Say hi to us on Whatsapp',
+  },
   email: {
     path: 'mailto:info@monedainvest.com',
     label: 'info@monedainvest.com',

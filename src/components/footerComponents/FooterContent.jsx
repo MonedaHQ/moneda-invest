@@ -5,6 +5,7 @@ import Image from 'next/image';
 import styles from './styles/footer.module.css';
 import { contactDetails } from '@/data/footerLinks';
 import { useRouter } from 'next/router';
+import { FaWhatsapp } from 'react-icons/fa6';
 
 function FooterContent({ quickLinks, exploreLinks }) {
   return (
@@ -31,6 +32,14 @@ function FooterContent({ quickLinks, exploreLinks }) {
                 href={contactDetails.phoneNumber.path}
               >
                 {contactDetails.phoneNumber.label}
+              </Button>
+            </li>
+          )}
+          {contactDetails.whatsapp && (
+            <li>
+              <FaWhatsapp />
+              <Button variant="link-dark" href={contactDetails.whatsapp.path}>
+                {contactDetails.whatsapp.label}
               </Button>
             </li>
           )}
