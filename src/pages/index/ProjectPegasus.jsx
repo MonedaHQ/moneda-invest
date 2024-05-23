@@ -52,7 +52,7 @@ function ProjectPegasus() {
   return (
     <Section variant="dark">
       <div className={styles.main} id="pegasus">
-        <motion.div
+        <div
           className={styles.content}
           ref={inViewRef}
           variants={contentVariant}
@@ -78,7 +78,7 @@ function ProjectPegasus() {
             </Button>
             {/* <Button variant="link-dark">Learn more</Button> */}
           </TwoButtonWrapper>
-        </motion.div>
+        </div>
         <div className={styles.imageContainer} ref={inViewRef}>
           <motion.img
             src="/images/pegasus-dashboard.jpg"

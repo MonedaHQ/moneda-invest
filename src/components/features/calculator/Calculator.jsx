@@ -40,7 +40,7 @@ function CalculatorDisplay() {
   }, []);
 
   return (
-    <motion.div
+    <div
       className={styles.calcDisplay}
       ref={ref}
       variants={scaleUpSlow}
@@ -48,7 +48,7 @@ function CalculatorDisplay() {
       animate={inView ? 'visible' : 'initial'}
     >
       <CalcForm products={products} />
-    </motion.div>
+    </div>
   );
 }
 

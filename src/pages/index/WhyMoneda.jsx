@@ -59,7 +59,7 @@ function WhyMoneda() {
 
   return (
     <Section>
-      <motion.div
+      <div
         className={styles.main}
         ref={ref}
         variants={scaleUpSlow}
@@ -77,7 +77,7 @@ function WhyMoneda() {
             <Feature key={feature.caption} feature={feature} />
           ))}
         </div>
-      </motion.div>
+      </div>
     </Section>
   );
 }

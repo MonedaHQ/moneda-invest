@@ -39,7 +39,7 @@ function Member({ member, index }) {
   const inView = useInView(ref, { once: true });
 
   return (
-    <motion.div
+    <div
       className={styles.member}
       ref={ref}
       custom={index}
@@ -67,7 +67,7 @@ function Member({ member, index }) {
       <div className={styles.paragraph}>
         <p>{paragraph}</p>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

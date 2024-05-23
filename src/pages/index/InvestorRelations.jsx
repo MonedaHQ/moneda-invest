@@ -19,7 +19,7 @@ function InvestorRelations({ motionKit }) {
 
   return (
     <Section>
-      <motion.div
+      <div
         className={styles.container}
         ref={inViewRef}
         variants={scaleUpSlow}
@@ -69,7 +69,7 @@ function InvestorRelations({ motionKit }) {
             alt="Investor Relations"
           />
         </div>
-      </motion.div>
+      </div>
     </Section>
   );
 }

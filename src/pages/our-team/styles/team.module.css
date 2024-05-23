@@ -48,8 +48,8 @@
 }
 
 .avatar {
-  width: 50%;
-  height: auto;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   object-position: center;
   border-radius: 50rem;

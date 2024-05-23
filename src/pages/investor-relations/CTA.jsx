@@ -11,7 +11,7 @@ function CTA() {
   const inView = useInView(ref, { once: true });
   return (
     <div className={styles.container}>
-      <motion.div
+      <div
         ref={ref}
         className={styles.cta}
         variants={scaleUpSlow}
@@ -25,7 +25,7 @@ function CTA() {
         >
           Become a partner
         </Button>
-      </motion.div>
+      </div>
     </div>
   );
 }

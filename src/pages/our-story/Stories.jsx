@@ -72,7 +72,7 @@ function Story({ story }) {
   const inView = useInView(storyRef, { once: true });
 
   return (
-    <motion.div
+    <div
       className={styles.story}
       ref={storyRef}
       variants={scaleUpSlow}
@@ -90,7 +90,7 @@ function Story({ story }) {
           <p>{formatCurrency(tradeAssets)}</p>
         </div>
       )}
-    </motion.div>
+    </div>
   );
 }
 

@@ -71,22 +71,15 @@ export const executiveTeam = {
         'From banking, through asset management to real estate, Energy and Consulting, Peter has spent over 12 years providing world class solutions in financial reporting and management accounting. A trusted professional, chartered accountant and senior fellow of the institure of chartered accountants of Nigeria (ICAN). University of Lags (MSC Accounting)',
       avatar: '/images/team/peter.jpg',
     },
-    {
-      name: 'Eyimofe Olagbaju',
-      position: 'Director of Trading and Operations',
-      job: null,
-      paragraph:
-        'Mofe has inserted an indelible mark in the oil, gas and mining industries having executed a myraid of projects in his capacity as Senior Trader, Director of Operations and Head of Trading at Linetrale Oil Supply & Trading Limited (now Linetrale Energy Trading Ltd), Tycon Minerals Limited and Optima Energy Resources Limited respectively. He still forges forward and now leads the trading operations at Moneda. Mofe holds a B.A. (Hons) in Business Management from Kingston University and holds a CITAC UK certification in Energy Trading.',
-      avatar: '/images/team/mofe.jpg',
-    },
-    {
-      name: 'Chinedu Ajaegbu',
-      position: 'Group Head, Structured Finance',
-      job: null,
-      paragraph:
-        'After a successful career in corporate finance and having executed transactions in excess of NGN 2 Billion centered around fund raising, mergers and acquisitions, Chinedu joined Moneda to lead the Structured Finance team of the group. Within the two years that he has spent in Moneda Invest, he has structured deals worth up to $10 million in the energy sector and has disbursed over $5 million in funding to oil and gas contractors within the sector',
-      avatar: '/images/team/chinedu.jpg',
-    },
+
+    // {
+    //   name: 'Chinedu Ajaegbu',
+    //   position: 'Group Head, Structured Finance',
+    //   job: null,
+    //   paragraph:
+    //     'After a successful career in corporate finance and having executed transactions in excess of NGN 2 Billion centered around fund raising, mergers and acquisitions, Chinedu joined Moneda to lead the Structured Finance team of the group. Within the two years that he has spent in Moneda Invest, he has structured deals worth up to $10 million in the energy sector and has disbursed over $5 million in funding to oil and gas contractors within the sector',
+    //   avatar: '/images/team/chinedu.jpg',
+    // },
     {
       name: 'Nkechukwuaga Amangbo',
       position: 'VP Liquidity, Commodities, Global Markets',
@@ -95,6 +88,7 @@ export const executiveTeam = {
         'She has over 10 years in Banking, with experience spanning across Customer Service, Correspondent Banking and Treasury Operations, giving her a broad range of perspectives and contributes to her ability to effectively deliver in record time. At Moneda, she supervises all aspects of our treasury operations including management of long-term and short-term funds, and money market investments. She has a degree in Economics and Development Studies and a certificate from the international Finance Corporation.',
       avatar: '/images/team/nkechi.jpg',
     },
+
     {
       name: 'Akintunde Marinho',
       position: 'Director, Marketing and Communication',
