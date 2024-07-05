@@ -32,6 +32,10 @@
   row-gap: 1rem;
 }
 
+.content p {
+  text-align: justify;
+}
+
 .content h3 {
   font-size: 3rem;
   color: var(--color-orange);
