@@ -17,7 +17,7 @@ function WhyMoneda() {
   const [countYears, refYears] = useCountIncrement(0, 8, false);
   const [countTransactions, refTransactions] = useCountIncrement(0, 390, false);
   const [countFunded, refFunded] = useCountIncrement(0, 150, false);
-  const [countSMEs, refSMEs] = useCountIncrement(0, 111, false);
+  const [countSMEs, refSMEs] = useCountIncrement(0, 130, false);
 
   const inView = useInView(ref, { once: true });
 
