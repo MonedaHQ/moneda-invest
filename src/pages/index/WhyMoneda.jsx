@@ -15,7 +15,8 @@ function WhyMoneda() {
   const ref = useRef();
 
   const [countYears, refYears] = useCountIncrement(0, 8, false);
-  const [countTransactions, refTransactions] = useCountIncrement(0, 362, false);
+  const [countTransactions, refTransactions] = useCountIncrement(0, 390, false);
+  const [countFunded, refFunded] = useCountIncrement(0, 150, false);
   const [countSMEs, refSMEs] = useCountIncrement(0, 111, false);
 
   const inView = useInView(ref, { once: true });
@@ -33,7 +34,14 @@ function WhyMoneda() {
       number: countTransactions,
       symbol: '$',
       count: 'M',
-      metric: 'processed transaction requests',
+      metric: 'value of funding requests',
+    },
+    {
+      ref: refFunded,
+      number: countFunded,
+      symbol: '$',
+      count: 'M',
+      metric: 'value of funded requests',
     },
     {
       ref: refSMEs,
