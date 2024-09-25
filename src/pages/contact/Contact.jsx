@@ -18,6 +18,7 @@ function ContactForm() {
 }
 
 function Form() {
+  const router = useRouter();
   const { contactUs, isSubmitting } = useContactUs();
   const { register, handleSubmit, formState, reset } = useForm();
   const { errors } = formState;
@@ -70,7 +71,7 @@ function Form() {
         <Button variant="primary" type="submit">
           Submit
         </Button>
-        <Button variant="link-light" onClick={() => reset()}>
+        <Button variant="link-light" onClick={() => router.push('/')}>
           Cancel
         </Button>
       </div>

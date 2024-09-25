@@ -20,7 +20,7 @@ function Home() {
     <>
       <MetaTags
         title="Home - Moneda Investment Limited"
-        description="We Are Attracted To African Gap"
+        description="We Are Attracted To African Gaps"
       />
       <Navigation scrollPosition={scrollPosition} />
       <BurgerNavigation />
