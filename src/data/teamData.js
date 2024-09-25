@@ -91,7 +91,7 @@ export const executiveTeam = {
 
     {
       name: 'Akintunde Marinho',
-      position: 'Director, Marketing and Communication',
+      position: 'VP Business Development, Marketing & Communicationsn',
       job: null,
       paragraph:
         'Akintunde has garnered a combined 11 years of experience in diversified industries including but not confined to finance, marketing and technology. Leading the marketing and communication team at Moneda, he has perfectly crafted and packaged the story of Moneda and her non-profit sister, 1952 Africa, for the world to see and appreciate the impact on the African continent. Akintunde is passionate about the development of the youth and can be found giving talks to millennials and staff in several organizations on robust business strategy, content monetization and digital content',
