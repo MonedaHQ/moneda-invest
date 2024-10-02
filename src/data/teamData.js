@@ -1,5 +1,5 @@
 export const advisoryTeam = {
-  title: 'Adivsory Board',
+  title: 'Advisory Board',
   members: [
     {
       name: 'Uche Wigwe',
