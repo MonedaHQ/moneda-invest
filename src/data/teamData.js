@@ -26,11 +26,11 @@ export const advisoryTeam = {
       avatar: '/images/team/idakwo.jpg',
     },
     {
-      name: 'Tope Imasekha',
+      name: 'Adeswua Tope Imasekha',
       position: 'Advisory Board Member',
       job: 'Corporate Finance and Development Economics Expert, Founder - Women Impacting Nigeria (WIN)',
       paragraph:
-        'Tope Imasekha is a Corporate Finance and Development Economics Specialist. She is a highly motivated and competent corporate finance and investment professional with over 12 years experience in transaction advisory, transacion/deal structuring, corporate finance, M & A advisory, project finance, valuation, and due diligence. She is a specialist in corporate finance with a background in Economics and Accounting. She has managed various energy transactions in excess of 4 Billion USD in Nigeria and other Sub-Saharan Africa countries',
+        'Tope Imasekha is a Corporate Finance and Development Economics Specialist. She is a highly motivated and competent corporate finance and investment professional with over 15 years experience in transaction advisory, transacion/deal structuring, corporate finance, M & A advisory, project finance, valuation, and due diligence. She is a specialist in corporate finance with a background in Economics and Accounting. She has managed various energy transactions in excess of 4 Billion USD in Nigeria and other Sub-Saharan Africa countries',
       avatar: '/images/team/imasekha.png',
     },
   ],
