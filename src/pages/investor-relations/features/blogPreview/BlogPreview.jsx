@@ -8,15 +8,17 @@ import { useRouter } from 'next/router';
 import { useThreePosts } from '@/hooks/useThreePosts';
 import Loader from '@/components/Loader';
 
+import he from 'he';
+
 function BlogPreview() {
   const { isLoading, posts } = useThreePosts();
-  // console.log(posts);
+  console.log(posts);
   if (isLoading) return <Loader />;
   if (!posts || posts.length === 0) return;
 
   const postPreview = posts.map((post) => {
     return {
-      title: post.title.rendered,
+      title: he.decode(post.title.rendered),
       slug: post.slug,
       imgSrc: getImage(post.content.rendered),
     };

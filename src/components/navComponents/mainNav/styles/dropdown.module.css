@@ -28,4 +28,6 @@
 .dropDownList {
   list-style: none;
   color: var(--color-black);
+  display: grid;
+  justify-items: start;
 }

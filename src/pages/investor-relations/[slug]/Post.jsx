@@ -2,6 +2,8 @@ import Section from '@/components/Section';
 import styles from './styles/post.module.css';
 import PostComments from './PostComments';
 
+import he from 'he';
+
 function Post({ post }) {
   if (!post) return;
   return (
@@ -14,21 +16,32 @@ function Post({ post }) {
 }
 
 function Title({ title, date, excerpt }) {
+  const decodedTitle = he.decode(title);
+  const decodedExcerpt = he.decode(excerpt['__html']);
   return (
     <header className={styles.header}>
       <p className={styles.authorDate}>
         Moneda Treasury - {new Date(date).toDateString()}
       </p>
-      <h1 className={styles.postTitle}>{title}</h1>
+      <h1 className={styles.postTitle}>{decodedTitle}</h1>
       {excerpt && (
-        <p dangerouslySetInnerHTML={excerpt} className={styles.excerpt} />
+        <p
+          dangerouslySetInnerHTML={{ __html: decodedExcerpt }}
+          className={styles.excerpt}
+        />
       )}
     </header>
   );
 }
 
 function Body({ body }) {
-  return <article dangerouslySetInnerHTML={body} className={styles.body} />;
+  const decodedBody = he.decode(body['__html']);
+  return (
+    <article
+      dangerouslySetInnerHTML={{ __html: decodedBody }}
+      className={styles.body}
+    />
+  );
 }
 
 export default Post;

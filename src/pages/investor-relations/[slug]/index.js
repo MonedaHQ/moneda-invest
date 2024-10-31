@@ -35,6 +35,8 @@ function BlogPost() {
     slug: selectedPost.slug,
   };
 
+  console.log(post);
+
   return (
     <>
       <MetaTags
