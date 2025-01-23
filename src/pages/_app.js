@@ -2,10 +2,19 @@ import { MenuTogglerProvider } from '@/context/MenuToggleContext';
 import { SmoothScrollProvider } from '@/context/SmoothScrollContext';
 import '@/styles/globals.css';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { useEffect } from 'react';
 import { Toaster } from 'react-hot-toast';
 
 export default function App({ Component, pageProps }) {
   const queryClient = new QueryClient();
+
+  useEffect(() => {
+    // Redirect to www.moneda.africa on load
+    if (typeof window !== 'undefined') {
+      window.location.href = 'https://www.moneda.africa';
+    }
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <SmoothScrollProvider>

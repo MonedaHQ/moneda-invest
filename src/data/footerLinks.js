@@ -21,7 +21,7 @@ export const homeExplore = [
 ];
 
 export const contactDetails = {
-  phoneNumber: { path: 'tel:+2348185000400', label: '+234 818 500 0400' },
+  phoneNumber: { path: 'tel:+2349011631095', label: '+234 901 163 1095' },
   whatsapp: {
     path: 'https://wa.link/ihxcl6',
     label: 'Say hi to us on Whatsapp',
