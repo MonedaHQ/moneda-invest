@@ -8,12 +8,12 @@ import { Toaster } from 'react-hot-toast';
 export default function App({ Component, pageProps }) {
   const queryClient = new QueryClient();
 
-  useEffect(() => {
-    // Redirect to www.moneda.africa on load
-    if (typeof window !== 'undefined') {
-      window.location.href = 'https://www.moneda.africa';
-    }
-  }, []);
+  // useEffect(() => {
+  //   // Redirect to www.moneda.africa on load
+  //   if (typeof window !== 'undefined') {
+  //     window.location.href = 'https://www.moneda.africa';
+  //   }
+  // }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
